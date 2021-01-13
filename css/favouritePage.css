@@ -1,0 +1,153 @@
+
+.container{
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+/*	font-weight: normal !important;
+	color: red !important;s*/
+
+}
+
+
+.favouritePage__buttons{
+	display: flex;
+	display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+
+.btn__remove{
+	display: flex;
+	position: relative;
+}
+
+
+.btn__email{
+	display: flex;
+	position: relative;
+
+}
+
+
+#email_remove{
+	background-color: #092C4C;
+  	border: none;
+  	color: white;
+  	padding: 10px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 14px;
+  	font-weight: bold;
+  	margin: 4px 2px;
+  	border-radius: 13px;
+  	width: 100px;
+  	margin-top: 8px;
+
+}
+
+/*.itemList{
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction:column ;
+    margin-top: 10px;
+    min-width: 100px;
+    font-family: 'IBM Plex Sans';
+    transition: width 4s ease-in-out;
+    padding-bottom: 80px;
+
+}
+
+
+.items{
+	display: flex;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	margin: 5px;
+	border-radius: 8px;
+	transition: width 4s ease-in-out;
+	padding: 2px;
+	width: 390px;
+}
+
+
+
+ .itemImage{
+ 	 padding-right:10px;
+ 	 display: flex;
+    transition: width 1s ease-in-out;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+ }
+*/
+ .checkBox{
+ 	position: relative !important;
+	margin-right: 10px !important;
+	margin-left: 5px !important;
+	height: 20px !important;
+	width: 20px !important;
+	border-radius: 50px !important;
+	padding: 20px;
+	left: 0px !important;
+	z-index: 0 !important;
+	top: 50% !important;
+ }
+
+
+p{
+	line-height: 18px;
+}
+
+ul {
+  list-style-type: none;
+   padding-left: 0pt;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.btn{
+	background-color: transparent;
+}
+
+
+/* On screens that are 414 - 1023 or less, set the background color to blue */
+@media screen and (min-width: 414px) {
+  .favourite__itemList {
+  	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	}
+
+  .items{
+  	color: black;
+	   flex: 0 0 60%;
+	   text-decoration: none;
+	}
+
+  .itemImage{
+ 	height: 160px;
+ 	width: 160px;
+ 	}
+
+}
+
+/* On screens that are 1024px or more */
+@media screen and (max-width: 1023px) {
+ .favourite__itemList {
+	flex-direction: column;
+	}
+
+
+ .itemImage{
+ 	height: 140px;
+ 	width: 130px;
+	}
+
+}

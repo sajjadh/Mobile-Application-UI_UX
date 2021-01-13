@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	
+
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/item_list.css">
+	<!-- <link rel="jquery" type="jquery" href="script/favorite.js"> -->
+
+	<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script type="text/javascript" src="scripts/favourites.js"></script>
+
+	<title>All Items</title>
+</head>
+	
+
+
+
+<body>
+
+	<header class="container">
+		<div class="header_section">
+<!-- 			<div class="header_item">
+				<a href="www.google.com" class="nav__link">
+					<i class="material-icons nav__icon back__icon">arrow_back_ios_new</i>
+				</a>
+			</div> -->
+				
+			<div class="header_item">	
+				<a href=""><img src="images/logo2.png" alt="logo"></a>
+			</div>
+				
+			<div class="header_item">	
+				<h1 class="page__name">All Items</h1> 
+			</div>	
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="search_sort_section">
+			<div class="search_sort_item">
+				<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
+			</div>
+
+			<div class="search_sort_item">
+				<a href="#" class="nav__link">
+				<i class="material-icons nav__icon filter">filter_alt</i>
+				</a>
+			</div>
+
+			<div class="search_sort_item">
+				<div class="vl"></div>
+			</div>
+
+			<div class="search_sort_item">
+				<a href="#" class="nav__link">
+				<i class="material-icons nav__icon sort">sort</i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container">
+		<ul class="itemList">
+
+			<!-- item 1 -->
+		<li data-keyword="iphone" item-price="1200"><a href="www.google.com" class="items" id="items">
+				<img src="images/iphone.png" class="itemImage">
+				<div class="item_details" id="item_details">
+					<h4> Apple iphone 12 Pro</h4>
+					<p> 256GB ROM - 4GB RAM- Black
+					<br>$1200.00<br>
+					<i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star_border</i></p>				
+				</div>
+			</a></li>
+
+
+					<!-- item 1 -->
+		<li data-keyword="temp1" item-price="120"><a href="www.google.com" class="items" id="items">
+					<img src="images/iphone.png" class="itemImage">
+				<div class="item_details" id="item_details">
+					<h4> Apple iphone 12 Pro</h4>
+					<p> 256GB ROM - 4GB RAM- Black
+					<br>$120.00<br>
+					<i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star_border</i></p>			
+				</div>
+			</a></li>
+
+					<!-- item 2 -->
+		<li data-keyword="plain tshirt" item-price="500"><a href="www.google.com" class="items" id="items">
+				<img src="images/tshirt.png" class="itemImage">
+				<div class="item_details" id="item_details">
+					<h4> Plain BLack Tshirt</h4>
+					<p> sleeved cotton shirt
+					<br> $500.00<br>
+					<i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star</i><i class="material-icons  rating">star_border</i></p>
+				</div>			
+			</a></li>
+		</ul>
+ 	</div>
+
+</body>
+	
+
+
+	<nav class="navigation">
+		<a href="#" class="nav__link">
+			<i class="material-icons nav__icon">home</i>
+			<span class="nav__text">Home</span>
+		</a>
+
+		<a href="#" class="nav__link">
+			<i class="material-icons nav__icon nav__link--active">favorite</i>
+			<span class="nav__text">Favorites</span>
+		</a>
+
+		<a href="#" class="nav__link">
+			<i class="material-icons nav__icon">shopping_cart</i>
+			<span class="nav__text">Cart</span>
+		</a>
+
+		<a href="#" class="nav__link">
+			<i class="material-icons nav__icon">local_offer</i>
+			<span class="nav__text">Deals</span>
+		</a>
+
+		<a href="#" class="nav__link">
+			<i class="material-icons nav__icon">person</i>
+			<span class="nav__text">Account</span>
+		</a>
+
+
+
+	</nav>
+
+</html>

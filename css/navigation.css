@@ -1,0 +1,57 @@
+/*Global font attributes*/
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {	
+	color: #444444 !important;
+	font-weight: normal !important;
+	font-family: sans-serif !important;
+}
+
+/*Global background color*/
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	background-color: white !important;
+}
+
+
+
+body{
+	margin: 0 0 80px 0;
+
+}
+
+.navigation{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 13px !important;
+	color: #444444 !important;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.4s ease-in-out;
+	font-weight: normal !important;
+
+}
+
+
+.nav__link:hover{
+	color: #092C4C !important;
+
+}
+
+.nav__link--active{
+
+}

@@ -1,0 +1,109 @@
+
+.container{
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+
+	}
+
+
+
+.itemList, .favourite_itemList, .offer_list{
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction:column ;
+    margin-top: 10px;
+    min-width: 100px;
+    font-family: 'IBM Plex Sans';
+    transition: width 4s ease-in-out;
+    padding-bottom: 80px;
+	
+	}
+
+
+.items{
+	display: flex;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	margin: 5px;
+	border-radius: 8px;
+	transition: width 4s ease-in-out;
+	padding: 4px;
+	width: 380px;
+	}
+
+
+ .itemImage{
+ 	padding-right:10px;
+ 	display: flex;
+    transition: width 1s ease-in-out;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+	}
+
+
+  ul{
+  list-style-type: none;
+   padding-left: 0pt;
+	}
+
+  a{
+	text-decoration: none;
+	color: black;
+	}
+
+  p{
+	line-height: 18px;
+	}
+
+  .rating{
+	color: orange;
+	}
+
+	.favorite_False{
+		color: grey !important;
+	}
+
+	.favorite_True{
+		color: red !important;
+	}
+
+
+
+/* On screens that are 414 - 1023 or less, set the background color to blue */
+@media screen and (min-width: 25.8em) {
+  .itemList, .favourite_itemList, .offer_list{
+  	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	}
+
+
+  .items{
+  	color: black;
+	   flex: 0 0 60%;
+	   text-decoration: none;
+	}
+
+  .itemImage{
+ 	height: 160px;
+ 	width: 160px;
+ 	}
+
+}
+
+/* On screens that are 1024px or more */
+@media screen and (max-width: 63.9em) {
+ .itemList {
+	flex-direction: column;
+	}
+
+ .itemImage{
+ 	height: 140px;
+ 	width: 130px;
+	}
+}

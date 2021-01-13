@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	
+
+
+	<!--JQuery  -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/favouritePage.css">
+	<link rel="stylesheet" type="text/css" href="css/item_list.css">
+
+	<!--JS -->
+	<script type="text/javascript" src="scripts/favourites.js"></script>
+	<!-- <script type="text/javascript" src="scripts/email.js"></script> -->
+	<script type="text/javascript" src="scripts/itemList.js"></script>
+	<script type="text/javascript" src="scripts/offerList.js"></script>
+
+
+	
+
+
+
+<!-- Other styles -->
+	<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	
+
+	<title>Android app</title>
+</head>
+	
+
+
+
+
+<body>
+	<!-- PAGE 01 -->
+	<div data-role="page" id="page1">
+		<header data-role= "header" class="container" data-position="fixed">
+			<div class="header_section">
+				<div class="header_item">	
+					<a href=""><img id='trigger' src="images/logo2.png" alt="logo"></a>
+				</div>
+					
+				<div class="header_item">	
+					<h1 class="page__name">All Items</h1> 
+				</div>	
+			</div>
+		</header>
+		<div class="container">
+			<div class="search_sort_section">
+				<div class="search_sort_item">
+					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon filter">filter_alt</i>
+					</a>
+				</div>
+
+				<div class="search_sort_item">
+					<div class="vl"></div>
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon sort">sort</i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="container">
+			<ul class="itemList" id="itemList">
+			</ul>
+	 	</div>
+	</div>
+
+
+														<!-- PAGE 02 -->
+<div data-role="page" id="page2">
+		<header data-role= "header" class="container" data-position="relative">
+			<div class="header_section">
+				<div class="header_item">	
+					<a href="#"><img src="images/logo2.png" alt="logo"></a>
+				</div>
+					
+				<div class="header_item">	
+					<h1 class="page__name hd">Favourites</h1> 
+				</div>	
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="search_sort_section">
+				<div class="search_sort_item">
+					<input type="search" name="search_sort" class="search" id="searchItem"  placeholder="Search Saved Items">
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon filter">filter_alt</i>
+					</a>
+				</div>
+
+				<div class="search_sort_item">
+					<div class="vl"></div>
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon sort">sort</i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="favouritePage__buttons">
+				<div class="btn__email">
+					<a href="#" id="temp" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Temp Testing</a>
+				</div>
+				<div>
+					<a href="#addEmail" id="email_btn" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-mail" >Email</a>
+				</div>
+			</div>
+		</div>
+		<!-- Favourite Item List -->
+		<div class="container">
+			<ul class="favourite_itemList" id="favourite_itemList" >
+
+			</ul>
+	 	</div>
+	</div>
+
+
+						<!-- PAGE 03 -->
+	<div data-role="page" id="page3">
+		<header data-role= "header" class="container" data-position="fixed">
+			<div class="header_section">
+				<div class="header_item">	
+					<a href=""><img id='trigger' src="images/logo2.png" alt="logo"></a>
+				</div>
+					
+				<div class="header_item">	
+					<h1 class="page__name">Offers</h1> 
+				</div>	
+			</div>
+		</header>
+		<div class="container">
+			<div class="search_sort_section">
+				<div class="search_sort_item">
+					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon filter">filter_alt</i>
+					</a>
+				</div>
+
+				<div class="search_sort_item">
+					<div class="vl"></div>
+				</div>
+
+				<div class="search_sort_item">
+					<a href="#" class="nav__link">
+					<i class="material-icons nav__icon sort">sort</i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul class="offer_list" id="offer_list">
+			</ul>
+	 	</div>
+	</div>
+
+
+		<!-- Favourites Page Add Element Email Popup -->
+	<div data-role="page" id="addEmail" data-dialog="true" data-theme="f" data-corners="true" data-close-btn="right">
+		<div style="margin:15px;padding-top: 5px">
+			<h3> Please enter the email adress</h3>
+		</div>
+ 		<ul style="margin:15px">
+ 			<li>
+ 				<input type="email" name="email" placeholder="Enter Email">
+ 			</li>
+
+ 			<li>
+ 				<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Send</a>
+ 				<a href="#page2" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Cancel</a>
+ 			</li>
+ 		</ul>	
+	</div>		
+
+
+
+</body>
+	
+	<div data-role= "footer" class="container" data-position="fixed">
+		<nav class="navigation">
+		<a href="#page3" class="nav__link">
+			<i class="material-icons nav__icon">home</i>
+			<span class="nav__text">Home</span>
+		</a>
+
+		<a href="#page2" class="nav__link" data-transition="pop">
+			<i class="material-icons nav__icon nav__link--active" >favorite</i>
+			<span class="nav__text">Favorites</span>
+		</a>
+
+		<a href="#" class="nav__link" data-transition="pop">
+			<i class="material-icons nav__icon">shopping_cart</i>
+			<span class="nav__text">Cart</span>
+		</a>
+
+		<a href="#page1" class="nav__link" data-transition="pop">
+			<i class="material-icons nav__icon">local_offer</i>
+			<span class="nav__text">Deals</span>
+		</a>
+
+		<a href="#" class="nav__link" data-transition="fade">
+			<i class="material-icons nav__icon" >person</i>
+			<span class="nav__text">Account</span>
+		</a>
+
+	</nav>
+
+
+	</div>
+
+</html>
+
