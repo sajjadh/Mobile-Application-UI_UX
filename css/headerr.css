@@ -1,4 +1,8 @@
-.containerr{
+html {
+    height: 100%;
+  }
+  
+  .containerr{
 	width: 100%;
 	display: flex;
 	overflow-x: auto;
@@ -24,7 +28,15 @@
       overflow-x: auto;
       flex: 1;
   }
-  
+  .headerr_item h1{
+    display: flex;
+    flex-grow: 50;
+      white-space: nowrap;
+      font-family: sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: left;
+  }
   
   .headerr_item{
       display: flex;
@@ -95,14 +107,25 @@
   }
 
  .vidz{
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    margin-top: 100px;
   }
-
+  div.scrollmenu {
+    background-color: #ffffff;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding:10%;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
   #QR{
     display: flex;
     position: relative;
@@ -181,3 +204,14 @@
       }
   
   }
+
+  a{
+    text-decoration: none;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    color: rgba(43, 44, 50, 0.762);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+      

@@ -47,7 +47,7 @@
 
 }
 
-/*.itemList{
+.itemList{
 	display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -82,7 +82,7 @@
     flex-direction: row;
     -webkit-flex-direction:row;
  }
-*/
+ 
  .checkBox{
  	position: relative !important;
 	margin-right: 10px !important;
