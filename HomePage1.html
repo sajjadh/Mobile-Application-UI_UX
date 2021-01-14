@@ -16,11 +16,11 @@
         <link rel="stylesheet" type="text/css" href="css/navigation.css">
         <link rel="stylesheet" type="text/css" href="css/headerr.css">
         <link rel="stylesheet" type="text/css" href="css/favouritePage.css">
-        <link rel="stylesheet" type="text/css" href="css/item_list.css">
+        <link rel="stylesheet" type="text/css" href="css/item_listz.css">
+        
     
         <!--JS -->
-        <script type="text/javascript" src="scripts/favourites.js"></script>
-        <script type="text/javascript" src="scripts/email.js"></script>
+        <script type="text/javascript" src="scripts/favouritesz.js"></script>
     
     
         
@@ -60,15 +60,34 @@
 
             <div class="containerr">
                 <div class="search_sort_section">
-                    <div class="search_sort_item">
+                    <div class="search_sort_item " >
                         <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Products & Promotions">
-                        <input type="image" src="images/QR.png" id="QR" style="float:left">
+                        <input type="image" src="images/QR.png" id="QR">
                     </div>
-                  
                 </div>
             </div>
 
+            <!-- First Main Div -->
+             <div class="containerd">
+                <div class="toppane"><h1>Explore By Category</h1></div>
+
+                <!-- Second Main Div -->
+                <div class="midpane">
+                  <h1>Recommended Deals</h1>
+                </div>
+              </div>
+
+            <!-- Third Main Div -->
+            <div class="bottompane"><h1>Recommended Products</h1>
+                <div class="container">
+                    <ul class="favourite_itemList" id="favourite_itemList" >
+                    </ul>
+                 </div>
+                </div>
+                
+ <!-- End of Page is below -->
             </div>
+           
     </body>
         
         <div data-role= "footer" class="container" data-position="fixed">
