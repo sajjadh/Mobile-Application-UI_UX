@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Fetch Fvaourite item Data
-	$.getJSON("https://api.jsonbin.io/b/5ffe73568aa7af359da96351/17", function(data) {
+	$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb", function(data) {
 		var item_data = '';
 		var isEmpty = 'true'; 
 		$.each(data, function(key, value) {

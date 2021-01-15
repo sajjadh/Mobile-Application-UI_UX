@@ -42,3 +42,27 @@ body{
 	display: flex;
 	overflow-x: auto;
 }
+
+
+  /* On screens that are 414 - 1023 or less, set the background color to blue */
+  @media screen and (min-width: 414px) {
+    #searchItem{
+       width: 750px !important;
+       
+   }
+   .search_sort_section {
+       height: 32px;
+   }
+
+}
+
+/* On screens that are 1024px or more */
+@media screen and (max-width: 1023px) {
+   #searchItem{
+       width: 270px !important;	
+   }
+   .search_sort_section {
+       height: 42px;
+   }
+
+}
