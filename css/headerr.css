@@ -106,9 +106,7 @@ html {
       margin-right: 2px;
   }
 
- .vidz{
-    transform: rotate(90deg);
-  }
+
   div.scrollmenu {
     background-color: #ffffff;
     overflow: auto;
