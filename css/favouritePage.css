@@ -131,10 +131,15 @@ a{
 	   text-decoration: none;
 	}
 
-  .itemImage{
+  /* .itemImage{
  	height: 160px;
  	width: 160px;
- 	}
+	 } */
+	
+	#favourites_Page  .favorite{
+	 padding-left: 96px
+	}	 
+	
 
 }
 
@@ -145,9 +150,14 @@ a{
 	}
 
 
- .itemImage{
- 	height: 140px;
+ /* .itemImage{
+ 	height: 160px;
  	width: 130px;
-	}
+	} */
+
+#favourites_Page  .favorite{
+	padding-left: 116px
+	}	
+	
 
 }

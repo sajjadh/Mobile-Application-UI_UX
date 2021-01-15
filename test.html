@@ -42,8 +42,8 @@
 
 
 <body>
-	<!-- PAGE 01 -->
-	<div data-role="page" id="page1">
+								<!-- PAGE 01 ALL ITEMS --> 
+	<div data-role="page" id="all_Items">
 		<header data-role= "header" class="container" data-position="fixed">
 			<div class="header_section">
 				<div class="header_item">	
@@ -63,7 +63,7 @@
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon filter">filter_alt</i>
+					<i class="material-icons nav__icon sortByName sortMe" id="sortName">sort_by_alpha</i>
 					</a>
 				</div>
 
@@ -73,9 +73,11 @@
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sort">sort</i>
+					<i class="material-icons nav__icon sortByPrice sortMe" id="sortPrice">sort</i>
 					</a>
 				</div>
+				<!-- toast message -->
+				<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>
 			</div>
 		</div>
 
@@ -83,12 +85,13 @@
 		<div class="container">
 			<ul class="itemList" id="itemList">
 			</ul>
-	 	</div>
+		</div>
+		 
 	</div>
 
 
-														<!-- PAGE 02 -->
-<div data-role="page" id="page2">
+								<!-- PAGE 02 FAVOURITES PAGE -->
+<div data-role="page" id="favourites_Page">
 		<header data-role= "header" class="container" data-position="relative">
 			<div class="header_section">
 				<div class="header_item">	
@@ -104,12 +107,12 @@
 		<div class="container">
 			<div class="search_sort_section">
 				<div class="search_sort_item">
-					<input type="search" name="search_sort" class="search" id="searchItem"  placeholder="Search Saved Items">
+					<input type="search" name="search_sort" class="search" id="searchItem"  placeholder="Search saved items">
 				</div>
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon filter">filter_alt</i>
+					<i class="material-icons nav__icon sortByName SortNameAsc" id="sortName">sort_by_alpha</i>
 					</a>
 				</div>
 
@@ -119,20 +122,19 @@
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sort">sort</i>
+					<i class="material-icons nav__icon sortByPrice SortPriceAsc" id="sortPrice">sort</i>
 					</a>
 				</div>
+				<!-- toast message -->
+				<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>
 			</div>
 		</div>
 
 
 		<div class="container">
 			<div class="favouritePage__buttons">
-				<div class="btn__email">
-					<a href="#" id="temp" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Temp Testing</a>
-				</div>
 				<div>
-					<a href="#addEmail" id="email_btn" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-mail" >Email</a>
+					<a href="#addEmail" id="email_btn" data-role="button" class="ui-btn ui-disabled ui-shadow ui-corner-all ui-btn-icon-left ui-icon-mail" >Email</a>
 				</div>
 			</div>
 		</div>
@@ -145,8 +147,8 @@
 	</div>
 
 
-						<!-- PAGE 03 -->
-	<div data-role="page" id="page3">
+						<!-- PAGE 03 - OFFERS PAGE -->
+	<div data-role="page" id="offers_Page">
 		<header data-role= "header" class="container" data-position="fixed">
 			<div class="header_section">
 				<div class="header_item">	
@@ -166,7 +168,7 @@
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon filter">filter_alt</i>
+					<i class="material-icons nav__icon sortByName SortNameAsc" id="sortName">sort_by_alpha</i>
 					</a>
 				</div>
 
@@ -176,9 +178,11 @@
 
 				<div class="search_sort_item">
 					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sort">sort</i>
+					<i class="material-icons nav__icon sortByPrice SortPriceAsc" id="sortPrice">sort</i>
 					</a>
 				</div>
+				<!-- toast message -->
+				<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>
 			</div>
 		</div>
 
@@ -201,23 +205,22 @@
 
  			<li>
  				<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Send</a>
- 				<a href="#page2" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Cancel</a>
+ 				<a href="#favourites_Page" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-mail" data-transition="pop">Cancel</a>
  			</li>
  		</ul>	
 	</div>		
-
 
 
 </body>
 	
 	<div data-role= "footer" class="container" data-position="fixed">
 		<nav class="navigation">
-		<a href="#page3" class="nav__link">
+		<a href="#offers_Page" class="nav__link">
 			<i class="material-icons nav__icon">home</i>
 			<span class="nav__text">Home</span>
 		</a>
 
-		<a href="#page2" class="nav__link" data-transition="pop">
+		<a href="#favourites_Page" class="nav__link" data-transition="pop">
 			<i class="material-icons nav__icon nav__link--active" >favorite</i>
 			<span class="nav__text">Favorites</span>
 		</a>
@@ -227,7 +230,7 @@
 			<span class="nav__text">Cart</span>
 		</a>
 
-		<a href="#page1" class="nav__link" data-transition="pop">
+		<a href="#all_Items" class="nav__link" data-transition="pop">
 			<i class="material-icons nav__icon">local_offer</i>
 			<span class="nav__text">Deals</span>
 		</a>

@@ -87,10 +87,6 @@
 #searchItem{
 	display: flex;
 	position: relative;
-	/*background-image:url('E:\search.png');*/
-	background-size: 25px;
-	background-position: right;
-	background-repeat: no-repeat;
 	width: 260px !important;
 	height: 30px !important;
   	box-sizing: border-box;
@@ -102,7 +98,7 @@
 	border-color: #092C4C;
 	padding-left: 20px !important; 
 	min-height: 20px !important;
-
+	font-size: 13px;
 
 }
 
@@ -128,11 +124,16 @@
  	right: 0;
 }
 
+.sortMe{
+	color:#444444;
+}
+
 
 /* On screens that are 414 - 1023 or less, set the background color to blue */
 @media screen and (min-width: 414px) {
  	#searchItem{
 		width: 750px !important;
+		/* font-size: 15px; */
 		
 	}
 	.search_sort_section {
@@ -144,7 +145,7 @@
 /* On screens that are 1024px or more */
 @media screen and (max-width: 1023px) {
 	#searchItem{
-		width: 270px !important;	
+		width: 270px !important;			
 	}
 	.search_sort_section {
 		height: 42px;
