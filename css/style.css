@@ -1,0 +1,201 @@
+body{
+    background-image: #ffffff;
+    background-size: cover;
+    text-align: center;
+}
+
+
+#confetti{
+    position: absolute;
+    height: 30%;
+    top:700px;
+    left:370px;
+}
+
+#HomeIntro{
+    position: absolute;
+    height: 150%;
+    top:250px;
+    left:180px;
+}
+
+#bigLogo{
+    position: absolute;
+    height: 50%;
+    top:300px;
+    left:270px;
+}
+
+#BlurredHome{
+    position: absolute;
+    height: 130%;
+    top:300px;
+    left:220px;
+}
+#HighlightQR{
+    position: absolute;
+    height: 10%;
+    top:430px;
+    left:660px;
+}
+
+#navigationDots1{
+    position:absolute;
+    width:200px;
+    top: 1850px;
+    left: 380px;
+}
+#navigationDots2{
+    position:absolute;
+    width:200px;
+    top: 1850px;
+    left: 380px;
+}
+#navigationDots4{
+    position:absolute;
+    width:200px;
+    top: 1850px;
+    left: 380px;
+}
+#navigationDots5{
+    position:absolute;
+    width:200px;
+    top: 1850px;
+    left: 365px;
+}
+
+
+#Outline{
+position: absolute;
+left : 50px;
+right : 20px;
+top: 10px;
+width: 890px;
+height: 2100px;
+}
+
+#smallLogo{
+position: absolute;
+left : 80px;
+top : 25px;
+max-width:45%;
+}
+
+/* Middle Font */
+h2{
+font-family: IBM Plex Sans;
+font-style:normal;
+font-weight: bolder;
+font-size: 52px;
+left: 300px;
+top: 750px;
+position: relative;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
+
+/* Green */
+h3{
+font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: lighter;
+font-size: 70px;
+top: 900px;
+position: absolute;
+left: 410px;
+color: #27AE60;
+}
+
+/* Top Fonts */
+h4{
+font-family: IBM Plex Sans;
+font-style: normal;
+font-size: 56px;
+line-height: 35px;
+top: 100px;
+position: relative;
+left: 320px;
+text-align:center;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Bottom Font */
+h5{
+font-family: IBM Plex Sans;
+font-style:normal;
+font-size: 52px;
+top: 1350px;
+position: relative;
+left: 300px;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);}
+
+a{
+position: absolute;
+left: 750px;
+top: 1950px;
+text-decoration: none;
+font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+i{
+position:fixed;
+font-size: 40px;
+left: 230px;
+top: 1200px;
+font-style:normal;
+font-weight: lighter;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+#FurtherDown{
+    position:fixed;
+    font-size: 40px;
+    left: 230px;
+    top: 1700px;
+    font-style:normal;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
+#FurtherDownLess{
+position:fixed;
+font-size: 40px;
+left: 230px;
+top: 1600px;
+font-style:normal;
+font-weight: lighter;
+color: rgba(0, 0, 0, 0.4);
+text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+  /* On screens that are 414 - 1023 or less, set the background color to blue */
+  @media screen and (min-width: 414px) {
+    #searchItem{
+       width: 750px !important;
+       
+   }
+   .search_sort_section {
+       height: 32px;
+   }
+
+}
+
+/* On screens that are 1024px or more */
+@media screen and (max-width: 1023px) {
+   #searchItem{
+       width: 270px !important;	
+   }
+   .search_sort_section {
+       height: 42px;
+   }
+
+}
