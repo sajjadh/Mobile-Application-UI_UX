@@ -15,7 +15,7 @@
     width: 50%;
     min-width: 90%;
     min-height: 90%;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 0.3em;
 }
 
@@ -23,17 +23,22 @@
     margin: 0em;
 }
 
+#body {
+    margin: 1em;
+    padding: 1em;
+    justify-content: center;
+}
+
 #footer{
     justify-content: right !important;
     align-items: center !important;
 }
 
-
-#body,img {
-    margin: 1em;
-    padding: 1em;
-    justify-content: center;
+#footer div{
+    justify-content: center !important;
+    align-items: center !important;
 }
+
 
 /*Global font attributes*/
 .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {	
