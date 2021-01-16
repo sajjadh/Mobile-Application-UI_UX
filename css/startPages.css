@@ -2,6 +2,11 @@
 
 *{
     font-family: 'IBM Plex Sans', sans-serif;
+    justify-items: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    text-align: center;
 }
 
 #start_page{
@@ -31,7 +36,7 @@
 #header-item div{
     /* margin: 1em; */
     padding: 1em;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center !important;
 }
 
