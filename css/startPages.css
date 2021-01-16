@@ -23,22 +23,17 @@
     margin: 0em;
 }
 
-#body {
-    margin: 1em;
+#header-item{
+    justify-content: center;
+    align-items: center !important;
+}
+
+#header-item div{
+    /* margin: 1em; */
     padding: 1em;
     justify-content: center;
-}
-
-#footer{
-    justify-content: right !important;
     align-items: center !important;
 }
-
-#footer div{
-    justify-content: center !important;
-    align-items: center !important;
-}
-
 
 /*Global font attributes*/
 .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {	
