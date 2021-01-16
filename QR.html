@@ -10,16 +10,30 @@
         
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/startPages.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="/scripts/qrReader.js"></script>
+        <script src="scripts/qrReader.js"></script>
         
     </head>
     <body>
-        <div style="width: 100%" id="reader"></div>
+<div id="reader" class="container-fluid"></div>
+        <div id="" class="container-fluid">
+            <div id="start-tab" >
+                <div id="header" class="row w-100 mx-2 my-2">
+                </div>
+               
+                <div id="footer" class="row w-100">
+                    <div class="row w-100"></div>
+                    <div class="row w-100">
+                        <button type="button" class="btn btn-light text-left">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <script>
             function onScanSuccess(qrCodeMessage) {
