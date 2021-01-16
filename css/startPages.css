@@ -29,9 +29,10 @@
 }
 
 
-#body {
+#body,img {
     margin: 1em;
     padding: 1em;
+    justify-content: center;
 }
 
 /*Global font attributes*/
@@ -101,4 +102,8 @@ body{
 
 h2{
     text-align: center;
+}
+
+p{
+    text-align: center;  
 }
