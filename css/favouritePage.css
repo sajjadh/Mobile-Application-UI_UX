@@ -87,13 +87,18 @@
  	position: relative !important;
 	margin-right: 10px !important;
 	margin-left: 5px !important;
-	height: 20px !important;
-	width: 20px !important;
+	height: 16px;
+	width: 16px;
 	border-radius: 50px !important;
 	padding: 20px;
 	left: 0px !important;
 	z-index: 0 !important;
-	top: 50% !important;
+	margin-top: 100px;
+ }
+
+ .ui-checkbox input{
+	height: 16px !important;
+	width: 16px !important;
  }
 
 
@@ -138,7 +143,13 @@ a{
 	
 	#favourites_Page  .favorite{
 	 padding-left: 96px
-	}	 
+	}
+	
+	#email_btn{
+		background-color: #F2994A;
+		color: white !important;
+		font-family: sans-serif;
+	}
 	
 
 }
@@ -148,8 +159,10 @@ a{
  .favourite__itemList {
 	flex-direction: column;
 	}
-
-
+/* .offer_Image{
+	width: 100%;
+	height: 250px;
+} */
  /* .itemImage{
  	height: 160px;
  	width: 130px;

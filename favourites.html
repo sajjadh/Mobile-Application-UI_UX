@@ -41,54 +41,6 @@
 
 
 <body>
-								<!-- PAGE 01 ALL ITEMS --> 
-	<div data-role="page" id="all_Items">
-		<header data-role= "header" class="container" data-position="fixed">
-			<div class="header_section">
-				<div class="header_item">	
-					<a href=""><img id='logo' src="images/logo3.png" alt="logo"></a>
-				</div>
-					
-				<div class="header_item">	
-					<h1 class="page__name">All Items</h1> 
-				</div>	
-			</div>
-		</header>
-		<div class="container">
-			<div class="search_sort_section">
-				<div class="search_sort_item">
-					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
-				</div>
-
-				<div class="search_sort_item">
-					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sortByName sortMe" id="sortName">sort_by_alpha</i>
-					</a>
-				</div>
-
-				<div class="search_sort_item">
-					<div class="vl"></div>
-				</div>
-
-				<div class="search_sort_item">
-					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sortByPrice sortMe" id="sortPrice">sort</i>
-					</a>
-				</div>
-				<!-- toast message -->
-				<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>
-			</div>
-		</div>
-
-		
-		<div class="container">
-			<ul class="itemList" id="itemList">
-			</ul>
-		</div>
-		 
-	</div>
-
-
 								<!-- PAGE 02 FAVOURITES PAGE -->
 <div data-role="page" id="favourites_Page">
 		<header data-role= "header" class="container" data-position="relative">
@@ -146,56 +98,6 @@
 		
 	</div>
 
-
-						<!-- PAGE 03 - OFFERS PAGE -->
-	<div data-role="page" id="offers_Page">
-		<header data-role= "header" class="container" data-position="fixed">
-			<div class="offer_Image">
-				<img id='trigger' src="images/offer.jpg" alt="offer">
-			</div>
-
-			<!-- <div class="header_section">
-				<div class="header_item">	
-					<a href=""><img id='trigger' src="images/logo2.png" alt="logo"></a>
-				</div>
-					
-				<div class="header_item">	
-					<h1 class="page__name">Offers</h1> 
-				</div>	
-			</div> -->
-		</header>
-		<div class="container">
-			<div class="search_sort_section">
-				<div class="search_sort_item">
-					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
-				</div>
-
-				<div class="search_sort_item">
-					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sortByName sortMe" id="sortName">sort_by_alpha</i>
-					</a>
-				</div>
-
-				<div class="search_sort_item">
-					<div class="vl"></div>
-				</div>
-
-				<div class="search_sort_item">
-					<a href="#" class="nav__link">
-					<i class="material-icons nav__icon sortByPrice sortMe" id="sortPrice">sort</i>
-					</a>
-				</div>
-				<!-- toast message -->
-				<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>
-			</div>
-		</div>
-
-		<div class="container">
-			<ul class="offer_list" id="offer_list">
-			</ul>
-	 	</div>
-	</div>
-
 		<!-- Send Email Popup -->
 	<div data-role="page" id="addEmail" data-dialog="true" data-theme="f" data-corners="true" data-close-btn="right">
 		<div style="margin:15px;padding-top: 5px">
@@ -219,36 +121,36 @@
 
 </body>
 	
-	<div data-role= "footer" class="container" data-position="fixed">
-		<nav class="navigation">
-		<a href="#offers_Page" class="nav__link">
-			<i class="material-icons nav__icon">home</i>
-			<span class="nav__text">Home</span>
-		</a>
+<div data-role= "footer" class="container" data-position="fixed">
+    <nav class="navigation">
+    <a href="offers.html" class="nav__link">
+        <i class="material-icons nav__icon">home</i>
+        <span class="nav__text">Home</span>
+    </a>
 
-		<a href="#favourites_Page" class="nav__link" data-transition="pop">
-			<i class="material-icons nav__icon nav__link--active" >favorite</i>
-			<span class="nav__text">Favorites</span>
-		</a>
+    <a href="favourites.html" class="nav__link" data-transition="pop">
+        <i class="material-icons nav__icon nav__link--active" >favorite</i>
+        <span class="nav__text">Favorites</span>
+    </a>
 
-		<a href="#" class="nav__link" data-transition="pop">
-			<i class="material-icons nav__icon">shopping_cart</i>
-			<span class="nav__text">Cart</span>
-		</a>
+    <a href="#" class="nav__link" data-transition="pop">
+        <i class="material-icons nav__icon">shopping_cart</i>
+        <span class="nav__text">Cart</span>
+    </a>
 
-		<a href="#all_Items" class="nav__link" data-transition="pop">
-			<i class="material-icons nav__icon">local_offer</i>
-			<span class="nav__text">Items</span>
-		</a>
+    <a href="allItems.html" class="nav__link" data-transition="pop">
+        <i class="material-icons nav__icon">local_offer</i>
+        <span class="nav__text">Items</span>
+    </a>
 
-		<a href="help.html" class="nav__link" data-transition="fade">
-			<i class="material-icons nav__icon" >person</i>
-			<span class="nav__text">Account</span>
-		</a>
+    <a href="#" class="nav__link" data-transition="fade">
+        <i class="material-icons nav__icon" >person</i>
+        <span class="nav__text">Account</span>
+    </a>
 
-	</nav>
+</nav>
 
 
-	</div>
+</div>
 
 </html>
