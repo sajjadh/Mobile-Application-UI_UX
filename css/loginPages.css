@@ -1,0 +1,92 @@
+*{
+}
+
+.container-fluid{
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#login-page{
+
+}
+
+#header{
+
+}
+
+#header-item{
+    justify-content: center;
+}
+
+#header-item div{
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#header-item a{
+    text-decoration: none;
+	color: #092C4C;
+}
+
+#header-item img{
+    margin: auto;
+    padding: 15%;
+}
+
+#or_row{}
+
+#body-item .btn-primary {
+    background-color: #092C4C;
+    border: none;
+    padding: 3%;
+    min-width: 95%;text-decoration: none;
+    
+}
+
+a .btn-primary {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+#body-item .btn-warning {
+    border: none;
+    padding: 3%;
+    min-width: 95%;
+}
+
+a .btn-warning {
+    text-decoration: none;
+    font-weight: 600;
+    color: #092C4C;
+}
+
+#body-item .btn-grey {
+    border: none;
+    padding: 3%;
+    min-width: 95%;
+}
+
+a .btn-grey {
+    text-decoration: none;
+    font-weight: 600;
+    color: #092C4C;
+}
+
+p{
+    color: #092C4C;
+}
+
+small{
+    color: #092C4C;
+}
+
+hr{
+    color: #092C4C;
+}

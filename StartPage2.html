@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Prashan Pages</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">	
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="css/style.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        
+        <!--JQuery  -->
+	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- App Style -->
+        <link rel="stylesheet" type="text/css" href="css/startPages.css"/>
+        <title>Welcome to Silton</title>
     </head>
     <body>
-
-<!-- Start of 25 Start Page -->
- <div data-role="page" id="StartPage2">
-
-    <div data-role="header">
-        <img src="images/Outline.png" id="Outline">
-        <div class="smallLogo">
-            <img src="images/Logo.jpg" id="smallLogo">
-            <h4>Home</h4>
+        <div id="start_page" class="container-fluid">
+            <div id="start-tab" class="">
+                <div id="header" class="row w-100 mx-2 my-2 align-content-center">
+                    <div id="header-item" class="row w-100">
+                        <h2 class="">Home</h2>
+                    </div>
+                    <div class="row w-100"><hr></div>
+                    <div id="header-item" class="row w-100">
+                        <img src="images/HomeIntro.png" class="img-fluid" alt="logo-large"/>
+                    </div>
+                </div>
+                <br>
+                <div id="header-item" class="row w-100">
+                    <p>Welcome to your Home Page! <br> 
+                        Our Dock is your Best Friend!</p>
+                </div>
+                <div id="header-item" class="row w-100">
+                    <div class="row w-100 justify-content-conter">
+                        <img id="progress_dots_02" src = "images/navigation_dots_02.png" class="img-fluid">
+                    </div>
+                    <div class="row">
+                        <button onclick="window.location.href='StartPage3.html'" type="button" class="btn btn-light text-center">Next</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <img src="images/HomeIntro.png" id="HomeIntro">
-
-    <div data-role="footer">
-        <img src = "images/Navigation Dots 2.png" id="navigationDots2">
-    </div>
-
-    <i id="FurtherDown">Welcome to your Home Page! <br> 
-    Our Dock is your Best Friend!</i>
-
-    <div data-role="next" id="2">
-        <li><a href="StartPage3.html" data-transition="fade">Next</a></li>
-    </div>
-
-</div>
-<!-- End of 2nd Start Page -->
-
-</body>
+    </body>
+    <footer></footer>
 </html>

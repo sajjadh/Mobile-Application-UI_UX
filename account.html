@@ -6,6 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Bootstrap CS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!--JQuery  -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/navigation.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+
+		<!-- Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 		<!-- App Style -->
 		<link rel="stylesheet" type="text/css" href="css/accountPages.css"/>
 		<title>Account</title>
@@ -13,60 +26,75 @@
 	<body>
 		<div id="account-page" class="container-fluid">
 			<div id="header" class="row w-100 mx-2 my-2">
-				<div id="header-item" class="col-1">
-					<p class="text-center"><a> < </a></p>
-				</div>
 				<div id="header-item" class="col-10">
-					<p class="text-center">Account</p>
+					<h4 class="text-center">Account</h4>
+				</div>
+				<div id="header-item" class="col-2">
+					<a href="./settings.html"><img src="images/cog-solid.png" class="img-fluid" alt="logo"></a>
 				</div>
 			</div>
 			<hr>
 			<div id="body" class="row w-100">
-				<div id="body-item" class="col">
-					<img src="" alt="Profile Picture">
+				<div id="body-item" class="col w-100">
+					<img src="images/maleesh.png" class="img-fluid" alt="Profile Picture"/>
 					<h5>Maleesh Piyaratne</h5>
 					<p>username@email.com</p>
 					<p>077 573 9556</p>		
 				</div>
+				<br>
 				<div id="body-item" class="card" style="width: 23rem;">
 					<div class="card-body">
-						<h6 class="card-title">Payment Method</h6>
+						<a href="./payment_method.html"><h6 class="card-title">Payment Method</h6></a>
 					</div>
 				</div>
 				<div id="body-item" class="card" style="width: 23rem;">
 					<div class="card-body">
-						<h6 class="card-title">Rewards</h6>
+						<a href="./rewards.html"><h6 class="card-title">Rewards</h6></a>
 					</div>
 				</div>
 				<div id="body-item" class="card" style="width: 23rem;">
 					<div class="card-body">
-						<h6 class="card-title">Orders</h6>
+						<a href="./."><h6 class="card-title">Orders</h6></a>
 					</div>
 				</div>
 				<div id="body-item" class="card" style="width: 23rem;">
 					<div class="card-body">
-						<h6 class="card-title">Location</h6>
+						<a href="./location.html"><h6 class="card-title">Location</h6></a>
 					</div>
 				</div>
 				<div id="body-item" class="card" style="width: 23rem;">
 					<div class="card-body">
-						<h6 class="card-title">Invite Friends +</h6>
+						<a href="./."><h6 class="card-title">Invite Friends +</h6></a>
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</body>
-	<!-- <footer>
-		<nav class="navbar navbar-light bg-light">
-			<div class="container">
-				<a class="navbar-brand" href="#">Home Icon - House</a>
-				<a class="navbar-brand" href="#">Favourites Icon - Heart</a>
-				<a class="navbar-brand" href="#">Cart Icon - Shopping Cart</a>
-				<a class="navbar-brand" href="#">Deals Icon - Tag </a>
-			</div>
+	<footer>
+		<nav class="navigation">
+			<a href="#offers_Page" class="nav__link">
+				<i class="material-icons nav__icon">home</i>
+				<span class="nav__text">Home</span>
+			</a>
+			<a href="#favourites_Page" class="nav__link" data-transition="pop">
+				<i class="material-icons nav__icon nav__link--active" >favorite</i>
+				<span class="nav__text">Favorites</span>
+			</a>
+			<a href="#" class="nav__link" data-transition="pop">
+				<i class="material-icons nav__icon">shopping_cart</i>
+				<span class="nav__text">Cart</span>
+			</a>
+			<a href="./test.html#all_Items" class="nav__link" data-transition="pop">
+				<i class="material-icons nav__icon">local_offer</i>
+				<span class="nav__text">Deals</span>
+			</a>
+			<a href="./account.html" class="nav__link" data-transition="fade">
+				<i class="material-icons nav__icon">person</i>
+				<span class="nav__text">Account</span>
+			</a>
 		</nav>
-	</footer> -->
+	</footer>
 </html>
 
 <!-- Header:

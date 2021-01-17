@@ -1,0 +1,306 @@
+.itemList, .favourite_itemList, .offer_list{
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction:column ;
+    margin-top: 10px;
+    min-width: 100px;
+    font-family: 'IBM Plex Sans';
+    transition: width 4s ease-in-out;
+    padding-bottom: 80px;
+	
+	}
+
+
+.items{
+	display: flex;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	margin: 5px;
+	border-radius: 8px;
+	transition: width 4s ease-in-out;
+	padding: 4px;
+	width: 380px;
+	}
+
+
+ .itemImage{
+ 	padding-right:10px;
+ 	display: flex;
+    transition: width 1s ease-in-out;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+	}
+
+
+  ul{
+  list-style-type: none;
+   padding-left: 0pt;
+	}
+
+  a{
+	text-decoration: none;
+	color: black;
+	}
+
+  p{
+	line-height: 18px;
+	}
+
+  .rating{
+	color: orange;
+	}
+
+	.favorite_False{
+		color: grey !important;
+	}
+
+	.favorite_True{
+		color: red !important;
+	}
+
+  .items{
+  	color: black;
+	   flex: 0 0 60%;
+	   text-decoration: none;
+	}
+
+  .itemImage{
+ 	height: 160px;
+ 	width: 160px;
+ 	}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .containerd {
+    width: 90%;
+    height: 100%;
+  }
+  
+h1{
+ font-family: 'IBM Plex Sans';
+ font-size: large;
+ font-weight: lighter;
+ background-color: #FFFFFF;
+ border-style: none;
+
+}
+  
+  
+  .toppane {
+    width: 100%;
+    left:20px;
+    position:relative;
+    border-collapse: collapse;
+    background-color: #4da6ff;
+  }
+
+  .midpane{
+    width: 100%;
+    left:20px;
+    height: 270px;
+    position: relative;
+    background-color: yellow;
+    border-collapse: collapse;
+  }
+
+  .bottompane {
+    width: 100%;
+    left:20px;
+    height: 270px;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    position: relative;
+
+}
+
+
+  /* On screens that are 414 - 1023 or less, set the background color to blue */
+  @media screen and (min-width: 414px) {
+    #searchItem{
+       width: 750px !important;
+       
+   }
+   .search_sort_section {
+       height: 32px;
+   }
+
+}
+
+/* On screens that are 1024px or more */
+@media screen and (max-width: 1023px) {
+   #searchItem{
+       width: 270px !important;	
+   }
+   .search_sort_section {
+       height: 42px;
+   }
+
+}
+
+
+html {
+  height: 100%;
+}
+
+.containerr{
+width: 100%;
+display: flex;
+overflow-x: auto;
+  justify-content: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.leaderr_item{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 40px;
+  height:40px;
+  width: 50px;  
+}
+
+.headerr_section {
+    /*position: fixed;*/
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 70px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    flex: 1;
+}
+
+.headerr_item h1{
+  flex-grow: 50;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.headerr_item{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    flex-grow: 50;
+    min-width: 20px;
+    width:100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgba(5, 2, 65, 0.858);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.headerr_item img{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    height:50px;
+    width: 50px;
+}
+
+
+.page__name{
+    margin-right:200px
+}
+
+.back__icon{
+    display: flex;
+    margin-top:8px;
+}
+
+.search_sort_section{
+    position: relative;
+    align-content: center;
+    /*width: 100%;*/
+    height: 42px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    /*background-color: #F0F0F0;*/
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.search_sort_item{
+    display: flex;
+    /*position: fixed;*/
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-width: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+    white-space: nowrap;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+div.scrollmenu img{
+  width:10%;
+  border: dotted;
+}
+
+div.scrollmenu {
+  background-color: #ffffff;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding:10%;
+  text-decoration: none;
+}
+
+#QR{
+  display: flex;
+  position: relative;
+  width: 40px !important;
+  height: 30px !important;
+  transition: width 0.4s ease-in-out;
+  white-space: nowrap;
+  padding-left: 65px !important; 
+  min-height: 20px !important;
+
+}
+#searchItem{
+    display: flex;
+    position: relative;
+    /*background-image:url('E:\search.png');*/
+    background-size: 25px;
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 260px !important;
+    height: 30px !important;
+      box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding-left: 8px;
+    transition: width 0.4s ease-in-out;
+    white-space: nowrap;
+    border-color: #092C4C;
+    padding-left: 20px !important; 
+    min-height: 20px !important;
+}
+
+

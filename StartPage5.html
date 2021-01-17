@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Prashan Pages</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">	
+        <!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="css/style.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="js/script.js"></script>
-        
+        <!--JQuery  -->
+	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- App Style -->
+        <link rel="stylesheet" type="text/css" href="css/startPages.css"/>
+        <title>Welcome to Silton</title>
     </head>
     <body>
-                    <!-- Start of 5th Start Page -->
-                    <div data-role="page" id="StartPage5">
-
-                        <div data-role="header">
-                            <img src="images/Outline.png" id="Outline">
-                            <div class="smallLogo">
-                                <img src="images/Logo.jpg" id="smallLogo">
-                                <h4>You're All Set!</h4>
-                            </div>
-                        </div>
-
-                        
-                        <img src="images/confetti.png" id="confetti">
-                        <h3>Great Job!</h3>
-
-                        <div data-role="footer">
-                            <h5>Happy Shopping!</h5>
-                            <img src = "images/Navigation%20Dots%205.png" id="navigationDots5">
-                        </div>
-
-                        <div data-role="next" id="5">
-                            <li><a href="HomePage1.html" data-transition="fade">Finish</a></li>
-                        </div>
-
-
-
+        <div id="start_page" class="container-fluid">
+            <div id="start-tab" class="">
+                <div id="header" class="row w-100 mx-2 my-2">
+                    <div id="header-item" class="col">
+                        <div class="row w-100"><hr><hr></div>
+                        <img id="confetti" src="images/confetti.png" class="img-fluid" alt="confetti"/>
+                        <div class="row w-100"><hr><hr></div>
+                        <h2>Great Job!</h2>
+                        <h5>Happy Shopping!</h5>
                     </div>
-                    <!-- End of 5th Start Page -->
-
-                </body>
-                </html>
-                    
-
- 
+                </div>
+                <br>
+                <div id="header-item" class="row w-100">
+                </div>
+                <br>
+                <div id="header-item" class="row w-100">
+                    <div class="row w-100"><hr><hr></div>
+                    <div class="row w-100"><hr><hr></div>
+                    <div class="row w-100"><hr><hr></div>
+                    <div class="row w-100 justify-content-conter">
+                        <img id="progress_dots_05" src = "images/navigation_dots_05.png" class="img-fluid">
+                    </div>
+                    <div class="row w-100"><hr><hr></div>
+                    <div class="row">
+                        <button onclick="window.location.href='index.html'" type="button" class="btn btn-success">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer></footer>
+</html>
