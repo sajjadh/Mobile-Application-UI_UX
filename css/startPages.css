@@ -58,7 +58,7 @@
 
 /*Global background color*/
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
-    background-color: white !important;
+    background-color: white;
     border-style: none;
 }
 
@@ -119,4 +119,11 @@ h2{
 
 p{
     text-align: center;  
+}
+
+.btn-success{
+    font-weight: 500 !important;
+    background-color: #27AE60 !important;
+    color: white !important;
+    border: none;
 }
