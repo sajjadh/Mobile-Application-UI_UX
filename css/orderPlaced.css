@@ -1,0 +1,92 @@
+body {
+    background: #EEE;
+}
+
+.img-fluid {
+    display: block;
+    margin-top: 40%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.back_btn {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    /* background-color: #555; */
+    color: black !important;
+    font-size: 26px;
+    padding: 2px 4px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body,
+input {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+}
+
+h3,
+.credit {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h3 {
+    color: #27AE60;
+    text-align: center;
+    margin-bottom: 50%;
+}
+
+.credit {
+    text-align: center;
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+.item {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.right {
+    float: right;
+}
+
+.sig {
+    font-family: "Allura";
+}
+
+.signature input.cc-cvc {
+    color: #000;
+    width: 40px;
+}
+
+.button {
+    background: #092C4C;
+    padding: 15px;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px 5px;
+}
+
+.checkout {
+    margin: 0 auto;
+    width: 350px;
+}
+
+.addr input {
+    width: 100%;
+    outline: none;
+    border: 0px solid;
+    padding: 5px;
+}

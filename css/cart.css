@@ -1,0 +1,19 @@
+/* Bottom Font */
+
+.cartHead {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.buttonCheck {
+    background: #092C4C;
+    padding: 15px;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px 5px;
+}
