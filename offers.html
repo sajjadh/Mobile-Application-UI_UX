@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="scripts/favourites.js"></script>
 	<script type="text/javascript" src="scripts/itemList.js"></script>
 	<script type="text/javascript" src="scripts/offerList.js"></script>
-
+	<script type="text/javascript" src="scripts/navigation.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>  
 	
 
@@ -41,12 +41,12 @@
 
 <body>
 									<!-- PAGE 03 - OFFERS PAGE -->
-	<div data-role="page" id="offers_Page">
+<div data-role="page" id="offers_Page">
 		<header data-role= "header" class="container" data-position="fixed">
 			<div class="offer_Image">
 				<!-- <a href="#"> < </a> -->
 				 <img id='trigger' src="images/offers.jpg" alt="offer"> 
-				 <a href="#" class="back_btn">
+				 <a href="#favourites_Page" class="back_btn">
 					<i class="material-icons nav__icon" >arrow_back_ios</i>
 				</a>
 			</div>
@@ -64,7 +64,7 @@
 		<div class="container">
 			<div class="search_sort_section">
 				<div class="search_sort_item">
-					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Saved Items">
+					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Offer Items">
 				</div>
 
 				<div class="search_sort_item">
@@ -92,7 +92,5 @@
 			</ul>
 	 	</div>
 	</div>
-
-
 </body>
 </html>
