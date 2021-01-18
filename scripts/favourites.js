@@ -4,24 +4,24 @@ $(document).ready(function() {
 
 	// Fetch Fvaourite item Data
 	function fetchData() {
-	$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/1", function(data) {
+	$.getJSON("https://api.jsonbin.io/b/6004bac14f42973a289e26a7", function(data) {
 		var item_data = '';
 		var isEmpty = 'true'; 
 		$.each(data, function(key, value) {
 			if (value.favourite == "true") {
-				item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+'>';
+				item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+' >';
 				item_data += '<div href=# class=items id=items>';
-				item_data += '<input type="checkbox" class="checkBox" name='+value.label+'  id='+value.label+'>';
+				item_data += '<input type="checkbox" class="checkBox" name="type"  id='+value.label+' >';
 				item_data += '<img src=' +value.image_url+' class="itemImage" id="itemImage" >';
 				item_data += '<div class="item_details" id="item_details">';
-				item_data += '<h4>'+value.name+'</h4>';
-				item_data += '<p>'+value.short_description+'</br>';
+				item_data += '<h4 id="title">'+value.name+'</h4>';
+				item_data += '<p id="description">'+value.short_description+'</br>';
 				item_data += '$'+value.price+'</br>';
 				// Iterating the number of stars
 				for (var i = 0; i <value.rating; i++) {
 				item_data += '<i class="material-icons  rating">star</i>';
 				}
-				item_data +=  value.rating_count+'</p>';
+				item_data +=  '</p>';
 				item_data += '<p><i data-role="button" class="material-icons ui-enabled cartBtn">add_shopping_cart</i>';
 				item_data += '<i class="material-icons ui-enabled favorite favorite_True">favorite</i></p>';	
 				item_data += '</div>';
@@ -57,11 +57,11 @@ $(document).ready(function() {
    		//Display message when all favourite items a re removed
    		var item_data = ''
 		if (($("#favourite_itemList li").length==0)) {
-				item_data += '<h4 class="emptyMessage">Uh No!, No Items</h4>';
+				item_data += '<h4 class="emptyMessage">Uh No!, No Items Saved</h4>';
 				$('#favourite_itemList').append(item_data);
 			}
 
-			displayToast('warning', 'Item Removed')
+			displayToast('warning', 'Removed From Favourites')
 
 	})
 
@@ -76,20 +76,71 @@ $(document).ready(function() {
 		}
 	})
 
-
-		// Enable disable email button function
+	// Enable disable email button function
 	$('.favourite_itemList').on('click','.checkBox', function () {
 		if($('.checkBox').is(':checked')){
 			$('#email_btn').removeClass('ui-disabled');
 		}else{
 			$('#email_btn').addClass('ui-disabled');
+			var name2 = $(this).closest('li').attr('data-keyword');
+			// checkedData.pop(name)
 		}
 	})
+	var checkedData = []
+	// Getting all checked items
+	function getCheckedItems() {			
+		$("input:checkbox[name=type]:checked").each(function(){
+			checkedData.push($(this).closest('li').attr('data-keyword'));
+		});
+		console.log("checked items: " + checkedData)			
+	}
+
+	var list = []
+	// create email body
+	$('#email_btn').on('click', function () {
+		list = []
+		item_data = ''
+		checkedData = []
+		getCheckedItems(checkedData)
+		// console.log("checked Items: " + checkedData)
+			$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/6", function(data) {
+			var item_data = '';
+			$.each(data, function(key, value) {
+			// Iterate throguh checked item and append 
+			for(i=0 ; i < checkedData.length; i++){
+					if (value.label == checkedData[i]) {
+
+						// console.log("Checked item: " + checkedData[i])
+						// console.log("Json item: " + value.label)
+
+						item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+' >';
+						item_data += '<img src=' +value.image_url+' class="itemImage" id="itemImage" >';
+						item_data += '<div class="item_details" id="item_details">';
+						item_data += '<h4 id="title">'+value.name+'</h4>';
+						item_data += '<p id="description">'+value.short_description+'</br>';
+						item_data += '$'+value.price+'</br>';	
+						item_data += '</div>';
+						item_data += '</li>';
+
+						$('#checkBox').prop('checked');
+					}
+				}
+
+				});
+				list.push(item_data)
+				console.log("List items :" +list)
+		});
+
+	});
+
 
 	
 	// Sort By Item Name
 	$('#favourites_Page .sortByName').on('click', function() { 
-		alert('test')
+		// Removing sort by price
+		$('.sortByPrice').removeClass('SortedAsc');
+		$('.sortByPrice').removeClass('SortedDsc');
+		$('.sortByPrice').addClass('sortMe');
 
 		// Ascending
 		if ($("#sortName").hasClass("sortMe")) {
@@ -100,8 +151,10 @@ $(document).ready(function() {
 			}
 			// To enable sort descending
 			$('.sortByName').removeClass('sortMe');
-			$('.sortByName').addClass('sortedAsc');
-		}else if ($("#sortName").hasClass("sortedAsc")) {
+			$('.sortByName').addClass('SortedAsc');
+			$('#favourites_Page .SortedAsc').css("background-color", " #c5c9ce")
+			$('#favourites_Page .SortedAsc').css("color", "#092C4C")
+		}else if ($("#sortName").hasClass("SortedAsc")){
 			// Descnding
 			$(".favourite_itemList li").sort(sort_li).appendTo('.favourite_itemList');
 			
@@ -109,19 +162,26 @@ $(document).ready(function() {
 			return ($(b).attr("name").toUpperCase()) > ($(a).attr("name").toUpperCase()) ? 1 : -1;
 			}
 			// To enable sort ascending
-			$('.sortByName').removeClass('sortedAsc');
-			$('.sortByName').addClass('sortedDec');
-		}else{
-			$('.sortByName').removeClass('sortedDec');
+			$('.sortByName').removeClass('SortedAsc');
+			$('.sortByName').addClass('SortedDsc');
+		}else if ($("#sortName").hasClass("SortedDsc")){
+			// default
+			$('.favourite_itemList li').remove()
+			fetchData();
+			$('.sortByName').removeClass('SortedDsc');
 			$('.sortByName').addClass('sortMe');
-		}	
+		}		
 	});	
 	
 	
 
 	// Sort by Price
 	$('#favourites_Page .sortByPrice').on('click', function() { 
-		alert('test')
+		
+		// Removing sort by name
+		$('.sortByName').removeClass('SortedAsc');
+		$('.sortByName').removeClass('SortedDsc');
+		$('.sortByName').addClass('sortMe');
 
 		// Ascending
 		if ($("#sortPrice").hasClass("sortMe")) {
@@ -134,11 +194,15 @@ $(document).ready(function() {
 				var numberB = Number(bn.replace(/[^0-9\.]+/g, ""));
 				return numberB - numberA;
 			}
+
 			// To enable sort descending
 			$('.sortByPrice').removeClass('sortMe');
-			$('.sortByPrice').addClass('sortedAsc');
+			$('.sortByPrice').addClass('SortedAsc');
 
-		}else if ($("#sortPrice").hasClass("sortedAsc")){
+			$('#favourites_Page .SortedAsc').css("background-color", " #c5c9ce")
+			$('#favourites_Page .SortedAsc').css("color", "#092C4C")
+
+		}else if ($("#sortPrice").hasClass("SortedAsc")){
 			// Descending
 			$(".favourite_itemList li").sort(sort_li).appendTo('.favourite_itemList');
 			function sort_li(a, b) {
@@ -150,32 +214,17 @@ $(document).ready(function() {
 				return numberA - numberB;
 			}
 			// To enable sort ascending
-			$('.sortByPrice').removeClass('sortedAsc');
-			$('.sortByPrice').addClass('sortedDec');
-		}else{
-			$('.sortByPrice').removeClass('sortedDec');
+			$('.sortByPrice').removeClass('SortedAsc');
+			$('.sortByPrice').addClass('SortedDsc');
+		}else if ($("#sortPrice").hasClass("SortedDsc")){
+			// default
+			$('.favourite_itemList li').remove()
+			fetchData();
+			$('.sortByPrice').removeClass('SortedDsc');
 			$('.sortByPrice').addClass('sortMe');
 		}
+		
 	});	
-
-
-	// // // Quick search for all items/deals page
-	// $("#searchItem").on("keyup",function (){
-	// 	$("ul li").hide()
-	// 	var current_query = $("#searchItem").val().toUpperCase();
-
-	// 	$("ul li").each(function(){
-	// 		var current_keyword = $(this).attr("name").toUpperCase();
-
-	// 		if (current_keyword.indexOf(current_query) >=0) {
-	// 			$(this).show();
-	// 		}
-	// 	})	
-	// })
-
-	// $('#favourites_Page #temp').on('click', function() { 
-	// 	alert('temp')
-	// 	})	
 
 		// display success toast
 		function displayToast(messageType, message) {
@@ -191,8 +240,56 @@ $(document).ready(function() {
 		$("#favourites_Page #displayToast").html('<p> '+message+' </p>');
 		$("#favourites_Page #displayToast").popup(); 
 		$("#favourites_Page #displayToast").popup("open"); 
-		setTimeout(function(){  $("#favourites_Page #displayToast").popup("close"); }, 1200); 
+		setTimeout(function(){  $("#favourites_Page #displayToast").popup("close"); }, 1000); 
 	}
+
+	
+// Send email poup validation
+	$('.emailField').on("change keyup", function () {
+		$("#error").text("please enter a valid email");
+		dirty = true;
+		var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+		if(($(".emailField").val()!="")){
+			if($(".emailField").val().match(mailformat)){
+				$('.send_btn').removeClass('ui-disabled');
+				$("#error").hide()
+			}
+		}else{
+			$('.send_btn').addClass('ui-disabled');
+			$("#error").text("please enter a valid email");
+		}
+})
+
+
+
+// Send email when click send
+$('#send_btn').on('click', function() { 
+
+	Email.send({
+			SecureToken : "4ab601a6-d790-447e-bfd9-0aa73c14bb40",
+			To : 'UIUX_CW02@gmail.com',
+			From : document.getElementById('emailField').value,
+			Subject : "Picked Favourite Items",
+			Body : '<html><h4>Following are the seleted favourite items: </h4></br><style>.itemList, .favourite_itemList, .offer_list{ display: flex;display: -webkit-flex;flex-direction: column;-webkit-flex-direction:column ;margin-top: 10px;min-width: 100px;font-family:"IBM Plex Sans";transition: width 4s ease-in-out;padding-bottom: 80px;} .items{display: flex;box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);background-color: #FFFFFF;margin: 5px;border-radius: 8px;transition: width 4s ease-in-out;padding: 4px;width: 380px;} .itemImage{padding-top: 15px;padding-right:10px;display: flex;transition: width 1s ease-in-out;display: -webkit-flex;flex-direction: row;-webkit-flex-direction:row;}ul{list-style-type: none; padding-left: 0pt;}</style><ul>'+list+'</ul></html>'
+		}).then(
+	message => displayToast("success", "Email Sent Sucessfully")
+	
+	);
+	
+});
+
+
+// //Display message when all favourite items a re removed
+// var item_data = ''
+// if (($("ul li").length==0)) {
+// 		item_data += '<h4 class="emptyMessage" >Uh No!, No Saved Items</h4>';
+// 		$('ul').append(item_data);
+// }	
+
+	// $('#favourites_Page #temp').on('click', function() { 
+	// 	alert('temp')
+	// 	})
 
 
 });

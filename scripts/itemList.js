@@ -1,41 +1,53 @@
-
 $(document).ready(function () {
+	
+	// $(document).ready(function() {
+    //     // auto refresh page after 1 second
+    //     setInterval(refreshPage(), 1000);
+    // });
+ 
+    // function refreshPage() { 
+    //     location.reload(); 
+    // }
 
-	$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/1", function(data) {
-		var item_data = '';
-		$.each(data, function(key, value) {
-				var dataLabel = value.name;
+	fetchData();
 
-				item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+'>';
-				item_data += '<div href=# class=items id=items>';
-				item_data += '<img src=' +value.image_url+' class="itemImage temp" id="itemImage">';
-				item_data += '<div class="item_details" id="item_details">';
-				item_data += '<h4>'+value.name+'</h4>';
-				item_data += '<p>'+value.short_description+'</br>';
-				item_data += '$'+value.price+'</br>';
-				// Iterating the number of stars
-				for (var i = 0; i <value.rating; i++) {
-				item_data += '<i class="material-icons  rating">star</i>';
-				}
+	function fetchData() {
+	
+		$.getJSON("https://api.jsonbin.io/b/6004bac14f42973a289e26a7", function(data) {
+			var item_data = '';
+			$.each(data, function(key, value) {
+					var dataLabel = value.name;
+
+					item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+'>';
+					item_data += '<div href=# class=items id=items>';
+					item_data += '<img src=' +value.image_url+' class="itemImage temp" id="itemImage">';
+					item_data += '<div class="item_details" id="item_details">';
+					item_data += '<h4>'+value.name+'</h4>';
+					item_data += '<p>'+value.short_description+'</br>';
+					item_data += '$'+value.price+'</br>';
+					// Iterating the number of stars
+					for (var i = 0; i <value.rating; i++) {
+					item_data += '<i class="material-icons  rating">star</i>';
+					}
+					
+					item_data +=  '</p>';
+					item_data += '<p><i class="material-icons ui-enabled cartBtn">add_shopping_cart</i>';
+						// check if the item is favourite or not
+					if (value.favourite == "true") {
+						item_data += '<i class="material-icons ui-enabled favorite favorite_True">favorite</i></p>';
+					}else{
+						item_data += '<i class="material-icons ui-enabled favorite favorite_False">favorite</i></p>';
+					}
+					
+					item_data += '</div>';
+					item_data += '</div>';
+					item_data += '</li>';
 				
-				item_data +=  value.rating_count+'</p>';
-				item_data += '<p><i class="material-icons ui-enabled cartBtn">add_shopping_cart</i>';
-					// check if the item is favourite or not
-				if (value.favourite == "true") {
-					item_data += '<i class="material-icons ui-enabled favorite favorite_True">favorite</i></p>';
-				}else{
-					item_data += '<i class="material-icons ui-enabled favorite favorite_False">favorite</i></p>';
-				}
-				
-				item_data += '</div>';
-				item_data += '</div>';
-				item_data += '</li>';
-			
+			});
+			$('#itemList').append(item_data);
+
 		});
-		$('#itemList').append(item_data);
-
-	});
-
+	}	
 // adding favourite item from ALL ITEMS PAGE & OFFERS PAGE
 	$('.itemList, .offer_list').on('click','.favorite_False', function () {	
 
@@ -59,7 +71,7 @@ $(document).ready(function () {
 
 		// create div and checkbox
 		var ele = document.createElement('div')
-		ele.innerHTML = ('<input type ="checkbox" class = "checkBox" name='+tempt+' id ='+tempt+'>')
+		ele.innerHTML = ('<input type ="checkbox"  class = "checkBox" name="type" id ='+tempt+'>')
 		
 		$('#checkBox').prop('checked', false);
 
@@ -68,24 +80,23 @@ $(document).ready(function () {
 		$(ele).insertBefore(".favourite_itemList .temp")	
 
 		//add class and remove itemList class
-
 		$('.favourite_itemList li[data-keyword='+tempt+'] div div').addClass('ui-checkbox')
-		$('.favourite_itemList li[data-keyword='+tempt+'] img').removeClass('temp');
+		$('.favourite_itemList li[data-keyword='+tempt+'] img').removeClass('temp');	
 
-
-		// alert( "Size: " + $(this.li).size() + 10 );
-		var clickedBtnID = $('#tempt').attr("data-keyword"); 
-   		// alert('you clicked on button #' + tempt);	
-
-
-
-		//    var toast = '<div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> testing this </p></div>'
-
-		// var message = 'testing testing testing'
-		// $('#itemList p').append(message);
-	
-		    
 	})
+
+	// Trigger toast
+	$('#all_Items .itemList').on('click','.favorite_False', function () {	
+		displayToast('success', 'Added To Favourites')
+		// alert('test1')
+	});
+
+
+		// Trigger toast
+	$('#all_Items .itemList').on('click','.favorite_True', function () {	
+		displayToast('warning', 'Removed From Favourites')
+		// alert('test2')
+	});
 
 
 // remove favourite item from ALL ITEMS PAGE & OFFERS PAGE
@@ -102,12 +113,8 @@ $(document).ready(function () {
 		$('.offer_list li[data-keyword='+tempt+'] div div .favorite').addClass('favorite_False')
 
 
-
 		$('.favourite_itemList li[data-keyword='+tempt+']').remove()
 	
-
-   		// alert('you clicked on button #' + tempt);	
-
    		//Display message when all favourite items a re removed
    		var item_data = ''
 		if (($("#favourite_itemList li").length==0)) {
@@ -115,22 +122,48 @@ $(document).ready(function () {
 				$('#favourite_itemList').append(item_data);
 			}
 	})
+
+
+
+	// display toast
+	function displayToast(messageType, message) {
+
+		if(messageType=="success"){
+			$('#all_Items #displayToast').css("background-color", "rgb(79, 196, 79)")
+		}else if(messageType=="error"){
+			$('#all_Items #displayToast').css("background-color", "rgb(204, 73, 73)")
+		}else if(messageType=="warning"){
+			$('#all_Items #displayToast').css("background-color", "rgb(219, 158, 45)")
+		}
+		
+	$("#all_Items #displayToast").html('<p> '+message+' </p>');
+	$("#all_Items #displayToast").popup(); 
+	$("#all_Items #displayToast").popup("open"); 
+	setTimeout(function(){  $("#all_Items #displayToast").popup("close"); }, 1000); 
+}
+
+
 	
-		// Sort By Item Name
+	// Sort By Item Name
 	$('#all_Items .sortByName').on('click', function() { 
-		alert('test')
+		// Removing sort by price
+		$('.sortByPrice').removeClass('SortedAsc');
+		$('.sortByPrice').removeClass('SortedDsc');
+		$('.sortByPrice').addClass('sortMe');
 
 		// Ascending
-		if ($("#sortName").hasClass("SortNameAsc")) {
+		if ($("#sortName").hasClass("sortMe")) {
 			$(".itemList li").sort(sort_li).appendTo('.itemList');
 			
 			function sort_li(a, b) {
 			return ($(b).attr("name").toUpperCase()) < ($(a).attr("name").toUpperCase()) ? 1 : -1;
 			}
 			// To enable sort descending
-			$('.sortByName').removeClass('SortNameAsc');
-			$('.sortByName').addClass('SortNameDes');
-		}else{
+			$('.sortByName').removeClass('sortMe');
+			$('.sortByName').addClass('SortedAsc');
+			$('#all_Items .SortedAsc').css("background-color", " #c5c9ce")
+			$('#all_Items .SortedAsc').css("color", "#092C4C")
+		}else if ($("#sortName").hasClass("SortedAsc")){
 			// Descnding
 			$(".itemList li").sort(sort_li).appendTo('.itemList');
 			
@@ -138,19 +171,29 @@ $(document).ready(function () {
 			return ($(b).attr("name").toUpperCase()) > ($(a).attr("name").toUpperCase()) ? 1 : -1;
 			}
 			// To enable sort ascending
-			$('.sortByName').removeClass('SortNameDes');
-			$('.sortByName').addClass('SortNameAsc');
-		}	
+			$('.sortByName').removeClass('SortedAsc');
+			$('.sortByName').addClass('SortedDsc');
+		}else if ($("#sortName").hasClass("SortedDsc")){
+			// default
+			$('#all_Items li').remove()
+			fetchData();
+			$('.sortByName').removeClass('SortedDsc');
+			$('.sortByName').addClass('sortMe');
+		}		
 	});	
 	
 	
 
 	// Sort by Price
 	$('#all_Items .sortByPrice').on('click', function() { 
-		alert('test')
+		
+		// Removing sort by name
+		$('.sortByName').removeClass('SortedAsc');
+		$('.sortByName').removeClass('SortedDsc');
+		$('.sortByName').addClass('sortMe');
 
 		// Ascending
-		if ($("#sortName").hasClass("SortPriceAsc")) {
+		if ($("#sortPrice").hasClass("sortMe")) {
 			$(".itemList li").sort(sort_li).appendTo('.itemList');
 			function sort_li(a, b) {
 
@@ -160,10 +203,15 @@ $(document).ready(function () {
 				var numberB = Number(bn.replace(/[^0-9\.]+/g, ""));
 				return numberB - numberA;
 			}
+
 			// To enable sort descending
-			$('.sortByName').removeClass('SortPriceAsc');
-			$('.sortByName').addClass('SortPriceDes');
-		}else{
+			$('#sortPrice').removeClass('sortMe');
+			$('#sortPrice').addClass('SortedAsc');
+
+			$('#all_Items .SortedAsc').css("background-color", " #c5c9ce")
+			$('#all_Items .SortedAsc').css("color", "#092C4C")
+
+		}else if ($("#sortPrice").hasClass("SortedAsc")){
 			// Descending
 			$(".itemList li").sort(sort_li).appendTo('.itemList');
 			function sort_li(a, b) {
@@ -175,27 +223,34 @@ $(document).ready(function () {
 				return numberA - numberB;
 			}
 			// To enable sort ascending
-			$('.sortByName').removeClass('SortPriceDes');
-			$('.sortByName').addClass('SortPriceAsc');
+			$('#sortPrice').removeClass('SortedAsc');
+			$('#sortPrice').addClass('SortedDsc');
+		}else if ($("#sortPrice").hasClass("SortedDsc")){
+			// default
+			$('.itemList li').remove()
+			fetchData();
+			$('.sortByName').removeClass('SortedDsc');
+			$('.sortByName').addClass('sortMe');
 		}
+		
 	});	
+	// Quick search for all items/deals page
+	$(".search").on("keyup",function (){
+		$("ul li").hide()
+		var current_query = $(".search").val().toUpperCase();
 
-
-
-	// display success toast
-	function displayToast(messageType, message) {
-
-			if(messageType=="success"){
-				$('#offers_Page #displayToast, #all_Items #displayToast').css("background-color", "rgb(79, 196, 79)")
-			}else if(messageType=="error"){
-				$('#offers_Page #displayToast, #all_Items #displayToast').css("background-color", "rgb(204, 73, 73)")
-			}else if(messageType=="warning"){
-				$('#offers_Page #displayToast, #all_Items #displayToast').css("background-color", "rgb(219, 158, 45)")
-			}
+		$("ul li").each(function(){
+			var current_keyword = $(this).attr("name").toUpperCase();
+			var current_keyword_2 = $(this).attr("category").toUpperCase();
 			
-		$("#offers_Page #displayToast, #all_Items #displayToast").html('<p> '+message+' </p>');
-		$("#offers_Page #displayToast, #all_Items #displayToast").popup(); 
-		$("#offers_Page #displayToast, #all_Items #displayToast").popup("open"); 
-		setTimeout(function(){  $("#offers_Page #displayToast, #all_Items #displayToast").popup("close"); }, 1200); 
-	}
+			if ((current_keyword.indexOf(current_query) >=0) || (current_keyword_2.indexOf(current_query) >=0)) {
+				$(this).show();
+			}		
+		})
+	})
+
+	$('#fav').on('click', function() { 
+		window.location.href = 'test.html#favourites_Page';	
+	})
+
 });
