@@ -1,9 +1,19 @@
 $(document).ready(function () {
+	
+	// $(document).ready(function() {
+    //     // auto refresh page after 1 second
+    //     setInterval(refreshPage(), 1000);
+    // });
+ 
+    // function refreshPage() { 
+    //     location.reload(); 
+    // }
 
 	fetchData();
 
 	function fetchData() {
-		$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/6", function(data) {
+	
+		$.getJSON("https://api.jsonbin.io/b/6004bac14f42973a289e26a7", function(data) {
 			var item_data = '';
 			$.each(data, function(key, value) {
 					var dataLabel = value.name;
@@ -71,12 +81,7 @@ $(document).ready(function () {
 
 		//add class and remove itemList class
 		$('.favourite_itemList li[data-keyword='+tempt+'] div div').addClass('ui-checkbox')
-		$('.favourite_itemList li[data-keyword='+tempt+'] img').removeClass('temp');
-
-
-		// alert( "Size: " + $(this.li).size() + 10 );
-		var clickedBtnID = $('#tempt').attr("data-keyword"); 
-   		// alert('you clicked on button #' + tempt);	
+		$('.favourite_itemList li[data-keyword='+tempt+'] img').removeClass('temp');	
 
 	})
 

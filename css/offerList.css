@@ -1,3 +1,18 @@
+.offer_Image .back_btn {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    /* background-color: #555; */
+    color: white !important;
+    font-size: 26px;
+    padding: 2px 4px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
 /* On screens that are 414 - 1023 or less, set the background color to blue */
 @media screen and (min-width: 414px) {
     .offer_Image{
