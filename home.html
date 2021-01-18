@@ -17,9 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
 
 	<!--JS -->
-	<script type="text/javascript" src="scripts/favourites.js"></script>
-	<script type="text/javascript" src="scripts/itemList.js"></script>
-	<script type="text/javascript" src="scripts/offerList.js"></script>
+	<script type="text/javascript" src="scripts/navigation.js"></script>
 
 	<script src="https://smtpjs.com/v3/smtp.js"></script>  
 	
@@ -82,7 +80,7 @@
         <!-- Second Main Div -->
         <div class="midpane">
           <h1>Offers</h1>
-          <a href="#offers_Page">View More</a>
+          <a href="#" id="viewMore">View More</a>
         </div>
       </div>
 
@@ -100,7 +98,8 @@
 	<script>
 		function Test() {
 		 window.location.href = "qr.html";
-		}
+        }
+        
 	</script>
 
 </body>
@@ -112,7 +111,7 @@
 			<span class="nav__text">Home</span>
 		</a>
 
-		<a href="#favourites_Page" class="nav__link fav" data-transition="pop">
+		<a href="" class="nav__link fav" data-transition="pop">
 			<i class="material-icons nav__icon nav__link--active" >favorite</i>
 			<span class="nav__text">Favorites</span>
 		</a>
@@ -122,7 +121,7 @@
 			<span class="nav__text">Cart</span>
 		</a>
 
-		<a href="#all_Items" class="nav__link" data-transition="pop">
+		<a href="" class="nav__link allItems" data-transition="pop">
 			<i class="material-icons nav__icon">local_offer</i>
 			<span class="nav__text">Items</span>
 		</a>
