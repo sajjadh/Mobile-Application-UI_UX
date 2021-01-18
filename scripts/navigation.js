@@ -23,7 +23,16 @@ $(document).ready(function() {
     // go to all items
 	$('.allItems').on('click', function() { 
 		window.location.href = 'test.html';	
+    })
+    
+     // go to accounts
+	$('.account').on('click', function() { 
+		window.location.href = 'account.html';	
 	})
 
+    // go to All Items
+	$('.allItems').on('click', function() { 
+		window.location.href = 'test.html';	
+	})
 
 });
