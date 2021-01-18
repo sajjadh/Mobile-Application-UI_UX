@@ -42,6 +42,9 @@ $(document).ready(function() {
 		});
 	}
 
+	$('.offer_Image .back_btn').on('click', function() { 
+		window.location.href = 'home_page.html';	
+	})
 
 	// Sort By Item Name
 	$('#offers_Page .sortByName').on('click', function() { 
