@@ -244,4 +244,8 @@ $(document).ready(function () {
 		})
 	})
 
+	$('#fav').on('click', function() { 
+		window.location.href = 'test.html#favourites_Page';	
+	})
+
 });
