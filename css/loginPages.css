@@ -39,13 +39,20 @@
     padding: 15%;
 }
 
-#or_row{}
+#or_row{
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 #body-item .btn-primary {
     background-color: #092C4C;
     border: none;
     padding: 3%;
-    min-width: 95%;text-decoration: none;
+    min-width: 95%;
+    text-decoration: none;
     
 }
 
@@ -53,6 +60,15 @@ a .btn-primary {
     text-decoration: none;
     font-weight: 600;
     color: white;
+}
+
+#body-item small{
+text-decoration: underline;
+}
+
+#body-item small a{
+    color: #6c757d;
+    
 }
 
 #body-item .btn-warning {
