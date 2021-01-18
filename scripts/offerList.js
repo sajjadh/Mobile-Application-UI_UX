@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
+	
 	fetchData()
 
 	// Fetch offer items Data
 	function fetchData() {
-	$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/6", function(data) {
+	$.getJSON("https://api.jsonbin.io/b/6004bac14f42973a289e26a7", function(data) {
 			var item_data = '';
 			$.each(data, function(key, value) {
 			if (value.offer =="true") {
@@ -41,6 +42,9 @@ $(document).ready(function() {
 		});
 	}
 
+	$('.offer_Image .back_btn').on('click', function() { 
+		window.location.href = 'home_page.html';	
+	})
 
 	// Sort By Item Name
 	$('#offers_Page .sortByName').on('click', function() { 

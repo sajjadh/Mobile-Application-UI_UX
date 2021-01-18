@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// Fetch Fvaourite item Data
 	function fetchData() {
-	$.getJSON("https://api.jsonbin.io/b/60006d4af98f6e35d5fc7bdb/6", function(data) {
+	$.getJSON("https://api.jsonbin.io/b/6004bac14f42973a289e26a7", function(data) {
 		var item_data = '';
 		var isEmpty = 'true'; 
 		$.each(data, function(key, value) {
@@ -114,13 +114,11 @@ $(document).ready(function() {
 						// console.log("Json item: " + value.label)
 
 						item_data += '<li name='+value.name+' data-keyword='+value.label+' item-price='+value.price+' category='+value.category+' >';
-
 						item_data += '<img src=' +value.image_url+' class="itemImage" id="itemImage" >';
 						item_data += '<div class="item_details" id="item_details">';
 						item_data += '<h4 id="title">'+value.name+'</h4>';
 						item_data += '<p id="description">'+value.short_description+'</br>';
 						item_data += '$'+value.price+'</br>';	
-
 						item_data += '</div>';
 						item_data += '</li>';
 
@@ -272,13 +270,13 @@ $('#send_btn').on('click', function() {
 			SecureToken : "4ab601a6-d790-447e-bfd9-0aa73c14bb40",
 			To : 'UIUX_CW02@gmail.com',
 			From : document.getElementById('emailField').value,
-			Subject : "This is the subject",
-			Body : '<html><style>.itemList, .favourite_itemList, .offer_list{ display: flex;display: -webkit-flex;flex-direction: column;-webkit-flex-direction:column ;margin-top: 10px;min-width: 100px;font-family:"IBM Plex Sans";transition: width 4s ease-in-out;padding-bottom: 80px;} .items{display: flex;box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);background-color: #FFFFFF;margin: 5px;border-radius: 8px;transition: width 4s ease-in-out;padding: 4px;width: 380px;} .itemImage{padding-top: 15px;padding-right:10px;display: flex;transition: width 1s ease-in-out;display: -webkit-flex;flex-direction: row;-webkit-flex-direction:row;}ul{list-style-type: none; padding-left: 0pt;}</style><ul>'+list+'</ul></html>'
+			Subject : "Picked Favourite Items",
+			Body : '<html><h4>Following are the seleted favourite items: </h4></br><style>.itemList, .favourite_itemList, .offer_list{ display: flex;display: -webkit-flex;flex-direction: column;-webkit-flex-direction:column ;margin-top: 10px;min-width: 100px;font-family:"IBM Plex Sans";transition: width 4s ease-in-out;padding-bottom: 80px;} .items{display: flex;box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);background-color: #FFFFFF;margin: 5px;border-radius: 8px;transition: width 4s ease-in-out;padding: 4px;width: 380px;} .itemImage{padding-top: 15px;padding-right:10px;display: flex;transition: width 1s ease-in-out;display: -webkit-flex;flex-direction: row;-webkit-flex-direction:row;}ul{list-style-type: none; padding-left: 0pt;}</style><ul>'+list+'</ul></html>'
 		}).then(
-	message => alert(message)
+	message => displayToast("success", "Email Sent Sucessfully")
 	
 	);
-	displayToast("success", "Email Sent")
+	
 });
 
 

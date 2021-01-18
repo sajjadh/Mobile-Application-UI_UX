@@ -20,7 +20,6 @@
 
 	<!--JS -->
 	<script type="text/javascript" src="scripts/favourites.js"></script>
-	<!-- <script type="text/javascript" src="scripts/email.js"></script> -->
 	<script type="text/javascript" src="scripts/itemList.js"></script>
 	<script type="text/javascript" src="scripts/offerList.js"></script>
 
@@ -41,11 +40,15 @@
 
 
 <body>
-						<!-- PAGE 03 - OFFERS PAGE -->
+									<!-- PAGE 03 - OFFERS PAGE -->
 	<div data-role="page" id="offers_Page">
 		<header data-role= "header" class="container" data-position="fixed">
 			<div class="offer_Image">
-				<img id='trigger' src="images/offer.jpg" alt="offer">
+				<!-- <a href="#"> < </a> -->
+				 <img id='trigger' src="images/offers.jpg" alt="offer"> 
+				 <a href="#" class="back_btn">
+					<i class="material-icons nav__icon" >arrow_back_ios</i>
+				</a>
 			</div>
 
 			<!-- <div class="header_section">
@@ -92,37 +95,4 @@
 
 
 </body>
-	
-<div data-role= "footer" class="container" >
-    <nav class="navigation">
-    <a href="offers.html" class="nav__link">
-        <i class="material-icons nav__icon">home</i>
-        <span class="nav__text">Home</span>
-    </a>
-
-    <a href="favourites.html" class="nav__link">
-        <i class="material-icons nav__icon nav__link--active" >favorite</i>
-        <span class="nav__text">Favorites</span>
-    </a>
-
-    <a href="#" class="nav__link">
-        <i class="material-icons nav__icon">shopping_cart</i>
-        <span class="nav__text">Cart</span>
-    </a>
-
-    <a href="allItems.html" class="nav__link" >
-        <i class="material-icons nav__icon">local_offer</i>
-        <span class="nav__text">Items</span>
-    </a>
-
-    <a href="#" class="nav__link" >
-        <i class="material-icons nav__icon" >person</i>
-        <span class="nav__text">Account</span>
-    </a>
-
-</nav>
-
-
-</div>
-
 </html>

@@ -136,11 +136,6 @@ a{
 	   text-decoration: none;
 	}
 
-  /* .itemImage{
- 	height: 160px;
- 	width: 160px;
-	 } */
-	
 	#favourites_Page  .favorite{
 	 padding-left: 96px
 	}
@@ -159,14 +154,6 @@ a{
  .favourite__itemList {
 	flex-direction: column;
 	}
-/* .offer_Image{
-	width: 100%;
-	height: 250px;
-} */
- /* .itemImage{
- 	height: 160px;
- 	width: 130px;
-	} */
 
 #favourites_Page  .favorite{
 	padding-left: 116px

@@ -64,6 +64,7 @@ html {
 	/*background-color: #F0F0F0;*/
 	display: flex;
 	overflow-x: auto;
+	padding-top: 5px;
 }
 
 
