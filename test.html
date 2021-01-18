@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/favouritePage.css">
 	<link rel="stylesheet" type="text/css" href="css/item_list.css">
 	<link rel="stylesheet" type="text/css" href="css/offerList.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
 
 	<!--JS -->
 	<script type="text/javascript" src="scripts/favourites.js"></script>
@@ -40,6 +41,69 @@
 
 
 <body>
+
+<!-- This is the home page -->
+	<div data-role="page" id="HomePage">
+		<headerr data-role= "headerr" class="container" data-position="fixed">
+			<div class="headerr_section">
+				<div class="headerr_item">	
+					<a href=""><img id='trigger' src="images/logo2.png" alt="logo"></a>
+				</div>
+					
+				<div class="headerr_item">	
+					<h1 class="page__name">Silton</h1> 
+				</div>	
+
+				<div class="leaderr_item">
+					<input type="image" id='Leaderboard' src="images/Leaderboard.png" alt="Leaderboard">
+				</div>
+			</div>
+		</headerr>
+
+		<div class="containerr">
+			<div class="search_sort_section">
+				<div class="search_sort_item " >
+					<input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Products & Promotions">
+					<input type="image" src="images/QR.png" id="QR" onclick="Test();">
+				</div>
+			</div>
+		</div>
+
+		<!-- First Main Div -->
+		 <div class="containerd">
+			<div class="toppane"><h1>Explore By Category</h1><br>
+				<div class="scrollmenu">
+					<a href="favourite.html">
+						<img src="images/pizza.png" alt="logo">
+						Home</a>
+					<a href="#news">
+						<!-- <img src="images/fish.png" alt="logo"> -->
+						News</a>
+					<a href="#contact">
+						<!-- <img src="images/milk.png" alt="logo"> -->
+						Contact</a>
+					<a href="#about">About</a>
+					<a href="#about">woot</a>
+				  </div>
+			</div>
+
+			<!-- Second Main Div -->
+			<div class="midpane">
+			  <h1>Offers</h1>
+			  <a href="#offers_Page">View More</a>
+			</div>
+		  </div>
+
+		<!-- Third Main Div -->
+		<div class="bottompane"><h1>Recommended Products</h1>
+			<div class="container">
+				<ul class="favourite_itemList" id="favourite_itemList" >
+				</ul>
+			 </div>
+			</div>
+			
+<!-- End of Page is below -->
+		</div>
 								<!-- PAGE 01 ALL ITEMS --> 
 	<div data-role="page" id="all_Items">
 		<header data-role= "header" class="container" data-position="fixed">
@@ -219,12 +283,17 @@
 		 <div data-role="popup" id="displayToast" data-position-to="window" data-transition="turn"><p> </p></div>	
 	</div>		
 
+	<script>
+		function Test() {
+		 window.location.href = "qr.html";
+		}
+	</script>
 
 </body>
 	
 	<div data-role= "footer" class="container" data-position="fixed">
 		<nav class="navigation">
-		<a href="#offers_Page" class="nav__link">
+		<a href="#HomePage" class="nav__link">
 			<i class="material-icons nav__icon">home</i>
 			<span class="nav__text">Home</span>
 		</a>
