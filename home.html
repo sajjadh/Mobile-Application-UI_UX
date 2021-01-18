@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	
+
+
+	<!--JQuery  -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+	<!--JS -->
+	<script type="text/javascript" src="scripts/favourites.js"></script>
+	<script type="text/javascript" src="scripts/itemList.js"></script>
+	<script type="text/javascript" src="scripts/offerList.js"></script>
+
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	
+
+<!-- Other styles -->
+	<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	
+
+	<title>Home Page</title>
+</head>
+
+<body>
+<!-- This is the home page -->
+<div data-role="page" id="HomePage">
+    <headerr data-role= "headerr" class="container" data-position="fixed">
+        <div class="headerr_section">
+            <div class="headerr_item">	
+                <a href=""><img id='trigger' src="images/logo2.png" alt="logo"></a>
+            </div>
+                
+            <div class="headerr_item">	
+                <h1 class="page__name">Silton</h1> 
+            </div>	
+
+            <div class="leaderr_item">
+                <input type="image" id='Leaderboard' src="images/Leaderboard.png" alt="Leaderboard">
+            </div>
+        </div>
+    </headerr>
+
+    <div class="containerr">
+        <div class="search_sort_section">
+            <div class="search_sort_item " >
+                <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Products & Promotions">
+                <input type="image" src="images/QR.png" id="QR" onclick="Test();">
+            </div>
+        </div>
+    </div>
+
+    <!-- First Main Div -->
+     <div class="containerd">
+        <div class="toppane"><h1>Explore By Category</h1><br>
+            <div class="scrollmenu">
+                <a href="favourite.html">
+                    <img src="images/pizza.png" alt="logo">
+                    Home</a>
+                <a href="#news">
+                    <!-- <img src="images/fish.png" alt="logo"> -->
+                    News</a>
+                <a href="#contact">
+                    <!-- <img src="images/milk.png" alt="logo"> -->
+                    Contact</a>
+                <a href="#about">About</a>
+                <a href="#about">woot</a>
+              </div>
+        </div>
+
+        <!-- Second Main Div -->
+        <div class="midpane">
+          <h1>Offers</h1>
+          <a href="#offers_Page">View More</a>
+        </div>
+      </div>
+
+    <!-- Third Main Div -->
+    <div class="bottompane"><h1>Recommended Products</h1>
+        <div class="container">
+            <ul class="favourite_itemList" id="favourite_itemList" >
+            </ul>
+         </div>
+        </div>
+        
+<!-- End of Page is below -->
+    </div>
+
+	<script>
+		function Test() {
+		 window.location.href = "qr.html";
+		}
+	</script>
+
+</body>
+	
+	<div data-role= "footer" class="container" data-position="fixed">
+		<nav class="navigation">
+		<a href="#HomePage" class="nav__link">
+			<i class="material-icons nav__icon">home</i>
+			<span class="nav__text">Home</span>
+		</a>
+
+		<a href="#favourites_Page" class="nav__link fav" data-transition="pop">
+			<i class="material-icons nav__icon nav__link--active" >favorite</i>
+			<span class="nav__text">Favorites</span>
+		</a>
+
+		<a href="#" class="nav__link" data-transition="pop">
+			<i class="material-icons nav__icon">shopping_cart</i>
+			<span class="nav__text">Cart</span>
+		</a>
+
+		<a href="#all_Items" class="nav__link" data-transition="pop">
+			<i class="material-icons nav__icon">local_offer</i>
+			<span class="nav__text">Items</span>
+		</a>
+
+		<a href="account.html" class="nav__link" data-transition="fade">
+			<i class="material-icons nav__icon" >person</i>
+			<span class="nav__text">Account</span>
+		</a>
+
+	</nav>
+
+
+	</div>
+
+</html>
