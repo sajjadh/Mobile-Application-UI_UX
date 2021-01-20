@@ -98,7 +98,6 @@
     left:20px;
     position:relative;
     border-collapse: collapse;
-    background-color: #4da6ff;
   }
 
   #HomePage .midpane{
@@ -144,12 +143,7 @@
 
 }
 
-
-#HomePage html {
-  height: 100%;
-}
-
-#HomePage .containerr{
+.containerr{
 width: 100%;
 display: flex;
 overflow-x: auto;
@@ -254,7 +248,7 @@ overflow-x: auto;
 }
 
 #HomePage div.scrollmenu img{
-  width:10%;
+  width:30%;
   border: dotted;
 }
 
@@ -303,4 +297,126 @@ overflow-x: auto;
     min-height: 20px !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+/*	font-weight: normal !important;
+	color: red !important;s*/
+
+}
+
+
+.favouritePage__buttons{
+	display: flex;
+	display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+
+.itemList{
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction:column ;
+    margin-top: 10px;
+    min-width: 100px;
+    font-family: 'IBM Plex Sans';
+    transition: width 4s ease-in-out;
+    padding-bottom: 80px;
+
+}
+
+
+.items{
+	display: flex;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	margin: 5px;
+	border-radius: 8px;
+	transition: width 4s ease-in-out;
+	padding: 2px;
+	width: 390px;
+}
+
+
+
+ .itemImage{
+ 	 padding-right:10px;
+ 	 display: flex;
+    transition: width 1s ease-in-out;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+ }
+ 
+ 
+p{
+	line-height: 18px;
+}
+
+ul {
+  list-style-type: none;
+   padding-left: 0pt;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.btn{
+	background-color: transparent;
+}
+
+
+/* On screens that are 414 - 1023 or less, set the background color to blue */
+@media screen and (min-width: 414px) {
+  .favourite__itemList {
+  	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	}
+
+  .items{
+  	color: black;
+	   flex: 0 0 60%;
+	   text-decoration: none;
+	}
+
+	#favourites_Page  .favorite{
+	 padding-left: 96px
+	}
+	
+	#email_btn{
+		background-color: #F2994A;
+		color: white !important;
+		font-family: sans-serif;
+	}
+	
+
+}
 
