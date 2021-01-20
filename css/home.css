@@ -121,7 +121,7 @@
 
 
   /* On screens that are 414 - 1023 or less, set the background color to blue */
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 412px) {
     #HomePage  #searchItem{
        width: 750px !important;
        
@@ -147,9 +147,9 @@
 width: 100%;
 display: flex;
 overflow-x: auto;
-  justify-content: center;
-  justify-content: space-between;
-  margin-left: 20px;
+justify-content: center;
+justify-content: space-between;
+margin-left: 20px;
 }
 
 #HomePage .leaderr_item{
@@ -169,7 +169,6 @@ overflow-x: auto;
     height: 70px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
-    flex: 1;
 }
 
 #HomePage .headerr_item h1{
@@ -318,7 +317,7 @@ overflow-x: auto;
 
 
 .container{
-	width: 100%;
+	width: 90%;
 	display: flex;
 	overflow-x: auto;
 	justify-content: center;
@@ -391,9 +390,17 @@ a{
 	background-color: transparent;
 }
 
+.container{
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+
+  }
+
 
 /* On screens that are 414 - 1023 or less, set the background color to blue */
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 412px) {
   .favourite__itemList {
   	flex-direction: row;
 	flex-wrap: wrap;

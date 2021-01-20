@@ -22,7 +22,8 @@
 	<script type="text/javascript" src="scripts/navigation.js"></script>
 	<script type="text/javascript" src="scripts/favourites.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>  
-	
+    <script type="text/javascript" src="scripts/offerList.js"></script>
+
 
 <!-- Other styles -->
 	<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
@@ -50,14 +51,22 @@
         </div>
     </headerr>
 
-    <div class="containerr">
+    <div class="container">
         <div class="search_sort_section">
-            <div class="search_sort_item " >
-                <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Products & Promotions">
-                <input type="image" src="images/QR.png" id="QR" onclick="Test();">
+            <div class="search_sort_item">
+                <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Items">
             </div>
+
+
+            <div class="search_sort_item">
+                <div class="vl"></div>
+            </div>
+            
+            <input type="image" src="images/QR.png" id="QR" onclick="Test();">
         </div>
     </div>
+                
+           
 
     <!-- First Main Div -->
      <div class="containerd">
@@ -85,7 +94,14 @@
         <div class="midpane">
           <h1>Offers</h1>
           <a href="#" id="viewMore">View More</a>
+            <div class="container">
+                <div class="scrollmenu">
+			    <ul class="offer_list" id="offer_list">
+                </ul>
+                </div>
+	 	    </div>
         </div>
+        
       </div>
 
     <!-- Third Main Div -->
