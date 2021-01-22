@@ -1,11 +1,11 @@
 #HomePage .itemList, .favourite_itemList, .offer_list{
 	display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction:column ;
+    display: inline-block !important;
+    flex-direction: row  !important;
+    -webkit-flex-direction:row !important;
     margin-top: 10px;
     min-width: 100px;
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans' ;
     transition: width 4s ease-in-out;
     padding-bottom: 80px;
 	
@@ -105,8 +105,12 @@
     left:20px;
     height: 270px;
     position: relative;
-    background-color: yellow;
     border-collapse: collapse;
+  }
+  .responsive {
+    width: 400px !important;
+    height: 200px !important;
+    justify-content: center !important;
   }
 
   #HomePage .bottompane {
@@ -285,7 +289,7 @@ margin-left: 20px;
     background-repeat: no-repeat;
     width: 260px !important;
     height: 30px !important;
-      box-sizing: border-box;
+    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 12px;
     padding-left: 8px;
@@ -295,8 +299,6 @@ margin-left: 20px;
     padding-left: 20px !important; 
     min-height: 20px !important;
 }
-
-
 
 
 
