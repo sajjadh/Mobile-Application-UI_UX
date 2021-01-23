@@ -85,19 +85,21 @@
   
   #HomePage h1{
  font-family: 'IBM Plex Sans';
- font-size: large;
- font-weight: lighter;
+ font-size: larger;
+ font-weight: bolder;
  background-color: #FFFFFF;
  border-style: none;
 
 }
-  
-  
+
 #HomePage .toppane {
     width: 100%;
+    left:0.25em;
     left:20px;
     position:relative;
     border-collapse: collapse;
+    display: inline-block;
+    margin-bottom: 2em;
   }
 
   #HomePage .midpane{
@@ -106,7 +108,19 @@
     height: 270px;
     position: relative;
     border-collapse: collapse;
+    display: inline-block;
+    margin-bottom: 2em;
+
   }
+
+  #HomePage .midpane a{
+    display: inline-block;
+    width:120% !important;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
   .responsive {
     width: 400px !important;
     height: 200px !important;
@@ -132,6 +146,8 @@
    }
    #HomePage .search_sort_section {
        height: 32px;
+       width:100%;
+       justify-content: center;
    }
 
 }
@@ -143,6 +159,7 @@
    }
    #HomePage .search_sort_section {
        height: 42px;
+       width:100%;
    }
 
 }
@@ -251,8 +268,9 @@ margin-left: 20px;
 }
 
 #HomePage div.scrollmenu img{
+  border-radius: 5% !important;
   width:30%;
-  border: dotted;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #HomePage div.scrollmenu {
@@ -263,21 +281,19 @@ margin-left: 20px;
 
 #HomePage div.scrollmenu a {
   display: inline-block;
+  width:40%;
   color: white;
   text-align: center;
-  padding:10%;
   text-decoration: none;
 }
 
 #HomePage #QR{
   display: flex;
   position: relative;
-  width: 40px !important;
-  height: 30px !important;
+  width:35px;
+  height:40px;
   transition: width 0.4s ease-in-out;
   white-space: nowrap;
-  padding-left: 65px !important; 
-  min-height: 20px !important;
 
 }
 #HomePage #searchItem{
