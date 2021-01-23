@@ -175,6 +175,7 @@ margin-left: 20px;
 
 #HomePage .leaderr_item{
   display: flex;
+  margin-right: 1.5em !important;
   margin-top: 20px;
   margin-left: 40px;
   height:40px;
