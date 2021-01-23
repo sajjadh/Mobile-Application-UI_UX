@@ -92,3 +92,7 @@ p{
 	font-weight: 500;
 	min-width: 0.85em;
 }
+/* Payment Page */
+#add_card {
+	color: #092C4C;
+}
