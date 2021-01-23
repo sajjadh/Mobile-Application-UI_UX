@@ -18,15 +18,14 @@
 
 	<!--JS -->
 	<script type="text/javascript" src="scripts/navigation.js"></script>
-
+	<script type="text/javascript" src="scripts/favourites.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>  
-	
+    <script type="text/javascript" src="scripts/offerList.js"></script>
+
 
 <!-- Other styles -->
 	<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	
 
 	<title>Home Page</title>
 </head>
@@ -50,38 +49,64 @@
         </div>
     </headerr>
 
-    <div class="containerr">
+    <div class="container">
         <div class="search_sort_section">
-            <div class="search_sort_item " >
-                <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Products & Promotions">
-                <input type="image" src="images/QR.png" id="QR" onclick="Test();">
+            <div class="search_sort_item">
+                <input type="search" name="search_sort" class="search" id="searchItem" data-clear-btn="true" placeholder="Search Items">
             </div>
+
+
+            <div class="search_sort_item">
+                <div class="vl"></div>
+            </div>
+            
+            <input type="image" src="images/QR.png" id="QR" onclick="Test();">
         </div>
     </div>
+                
+           
 
     <!-- First Main Div -->
      <div class="containerd">
         <div class="toppane"><h1>Explore By Category</h1><br>
-            <div class="scrollmenu">
-                <a href="favourite.html">
-                    <img src="images/pizza.png" alt="logo">
-                    Home</a>
-                <a href="#news">
-                    <!-- <img src="images/fish.png" alt="logo"> -->
-                    News</a>
-                <a href="#contact">
-                    <!-- <img src="images/milk.png" alt="logo"> -->
-                    Contact</a>
-                <a href="#about">About</a>
-                <a href="#about">woot</a>
+            <div class="scrollmenu"> 
+                <a href="test.html#favourites_Page">
+                    <img src="images/pizza.png" alt="logo"><br>
+                    Ready Made</a>
+
+                <a href="test.html#favourites_Page">
+                     <img src="images/fish.png" alt="logo"><br>
+                    Frozen Foods</a>
+
+                <a href="test.html#favourites_Page">
+                    <img src="images/milk.png" alt="logo"><br>
+                    Groceries</a>
+               
+                    <a href="test.html#favourites_Page">
+                        <img src="images/pizza.png" alt="logo"><br>
+                        Bakery</a>
               </div>
         </div>
 
         <!-- Second Main Div -->
         <div class="midpane">
           <h1>Offers</h1>
-          <a href="#" id="viewMore">View More</a>
+          <a href="#" id="viewMore"></a>
+          <div class="scrollmenu">
+            <a href="test.html#favourites_Page">
+                <img src="images/foodAd1.jpg" alt="logo" class="responsive"><br>
+                </a>
+
+            <a href="test.html#favourites_Page">
+                 <img src="images/clothesAd.png" alt="logo" class="responsive">
+                </a>
+
+            <a href="test.html#favourites_Page">
+                <img src="images/foodAd2.jpg" alt="logo" class="responsive">
+                </a>
+          </div>
         </div>
+        
       </div>
 
     <!-- Third Main Div -->
@@ -99,7 +124,6 @@
 		function Test() {
 		 window.location.href = "qr.html";
         }
-        
 	</script>
 
 </body>
