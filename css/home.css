@@ -1,11 +1,11 @@
 #HomePage .itemList, .favourite_itemList, .offer_list{
 	display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction:column ;
+    display: inline-block !important;
+    flex-direction: row  !important;
+    -webkit-flex-direction:row !important;
     margin-top: 10px;
     min-width: 100px;
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans' ;
     transition: width 4s ease-in-out;
     padding-bottom: 80px;
 	
@@ -85,20 +85,21 @@
   
   #HomePage h1{
  font-family: 'IBM Plex Sans';
- font-size: large;
- font-weight: lighter;
+ font-size: larger;
+ font-weight: bolder;
  background-color: #FFFFFF;
  border-style: none;
 
 }
-  
-  
+
 #HomePage .toppane {
     width: 100%;
+    left:0.25em;
     left:20px;
     position:relative;
     border-collapse: collapse;
-    background-color: #4da6ff;
+    display: inline-block;
+    margin-bottom: 2em;
   }
 
   #HomePage .midpane{
@@ -106,8 +107,24 @@
     left:20px;
     height: 270px;
     position: relative;
-    background-color: yellow;
     border-collapse: collapse;
+    display: inline-block;
+    margin-bottom: 2em;
+
+  }
+
+  #HomePage .midpane a{
+    display: inline-block;
+    width:120% !important;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .responsive {
+    width: 400px !important;
+    height: 200px !important;
+    justify-content: center !important;
   }
 
   #HomePage .bottompane {
@@ -122,13 +139,15 @@
 
 
   /* On screens that are 414 - 1023 or less, set the background color to blue */
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 412px) {
     #HomePage  #searchItem{
        width: 750px !important;
        
    }
    #HomePage .search_sort_section {
        height: 32px;
+       width:100%;
+       justify-content: center;
    }
 
 }
@@ -140,26 +159,23 @@
    }
    #HomePage .search_sort_section {
        height: 42px;
+       width:100%;
    }
 
 }
 
-
-#HomePage html {
-  height: 100%;
-}
-
-#HomePage .containerr{
+.containerr{
 width: 100%;
 display: flex;
 overflow-x: auto;
-  justify-content: center;
-  justify-content: space-between;
-  margin-left: 20px;
+justify-content: center;
+justify-content: space-between;
+margin-left: 20px;
 }
 
 #HomePage .leaderr_item{
   display: flex;
+  margin-right: 1.5em !important;
   margin-top: 20px;
   margin-left: 40px;
   height:40px;
@@ -175,7 +191,6 @@ overflow-x: auto;
     height: 70px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
-    flex: 1;
 }
 
 #HomePage .headerr_item h1{
@@ -254,8 +269,9 @@ overflow-x: auto;
 }
 
 #HomePage div.scrollmenu img{
-  width:10%;
-  border: dotted;
+  border-radius: 5% !important;
+  width:30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #HomePage div.scrollmenu {
@@ -266,21 +282,19 @@ overflow-x: auto;
 
 #HomePage div.scrollmenu a {
   display: inline-block;
+  width:40%;
   color: white;
   text-align: center;
-  padding:10%;
   text-decoration: none;
 }
 
 #HomePage #QR{
   display: flex;
   position: relative;
-  width: 40px !important;
-  height: 30px !important;
+  width:35px;
+  height:40px;
   transition: width 0.4s ease-in-out;
   white-space: nowrap;
-  padding-left: 65px !important; 
-  min-height: 20px !important;
 
 }
 #HomePage #searchItem{
@@ -292,7 +306,7 @@ overflow-x: auto;
     background-repeat: no-repeat;
     width: 260px !important;
     height: 30px !important;
-      box-sizing: border-box;
+    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 12px;
     padding-left: 8px;
@@ -303,4 +317,132 @@ overflow-x: auto;
     min-height: 20px !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+	width: 90%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+/*	font-weight: normal !important;
+	color: red !important;s*/
+
+}
+
+
+.favouritePage__buttons{
+	display: flex;
+	display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+
+.itemList{
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction:column ;
+    margin-top: 10px;
+    min-width: 100px;
+    font-family: 'IBM Plex Sans';
+    transition: width 4s ease-in-out;
+    padding-bottom: 80px;
+
+}
+
+
+.items{
+	display: flex;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #FFFFFF;
+	margin: 5px;
+	border-radius: 8px;
+	transition: width 4s ease-in-out;
+	padding: 2px;
+	width: 390px;
+}
+
+
+
+ .itemImage{
+ 	 padding-right:10px;
+ 	 display: flex;
+    transition: width 1s ease-in-out;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+ }
+ 
+ 
+p{
+	line-height: 18px;
+}
+
+ul {
+  list-style-type: none;
+   padding-left: 0pt;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.btn{
+	background-color: transparent;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	justify-content: center;
+
+  }
+
+
+/* On screens that are 414 - 1023 or less, set the background color to blue */
+@media screen and (min-width: 412px) {
+  .favourite__itemList {
+  	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	}
+
+  .items{
+  	color: black;
+	   flex: 0 0 60%;
+	   text-decoration: none;
+	}
+
+	#favourites_Page  .favorite{
+	 padding-left: 96px
+	}
+	
+	#email_btn{
+		background-color: #F2994A;
+		color: white !important;
+		font-family: sans-serif;
+	}
+	
+
+}
 

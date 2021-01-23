@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+
+    <!--JQuery  -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+
+    <!--JS -->
+    <script type="text/javascript" src="scripts/checkout.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+    <!-- Other styles -->
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    <title>Checkout</title>
+</head>
+
+
+
+
+
+<body>
+    <div class="checkout">
+        <a href="#cartPage" class="back_btn">
+            <i class="material-icons nav__icon">arrow_back_ios</i>
+        </a>
+        <h2>Checkout</h2>
+        <p>You don't have a card saved with us, so you'll need to add one now</p>
+        <div class="card">
+            <div class="front side">
+                <span class="company">
+                    CARD
+                </span> PAYMENT CARD
+                <input type="text" placeholder="Card number" />
+                <div>
+                    Expires:
+                    <input type="text" placeholder="MM/YY" />
+                </div>
+                <div>CVC: <input type="text" placeholder="000" maxlength="4" />
+                </div>
+            </div>
+        </div>
+        <p>Now, where to send it?</p>
+        <div class="addr">
+            <input type="text" placeholder="Address Line 1" />
+            <input type="text" placeholder="Address Line 2" />
+            <input type="text" placeholder="Town" />
+            <input type="text" placeholder="Postcode" />
+            <input type="text" placeholder="Country" />
+        </div>
+        <div class="button">
+            Proceed Payment
+        </div>
+    </div>
+
+
+</body>
+
+</html>
