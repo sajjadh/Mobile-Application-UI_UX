@@ -8,7 +8,7 @@
     justify-content: center !important;
     align-items: center !important;
     align-content: center !important;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #header-item{
@@ -43,6 +43,7 @@ hr.style-six {
 
 #body{
 	padding: 0.5em;
+	text-align: center;
 }
 
 #body .card-body{
@@ -92,7 +93,39 @@ p{
 	font-weight: 500;
 	min-width: 0.85em;
 }
+
 /* Payment Page */
 #add_card {
 	color: #092C4C;
+}
+
+/* Rewards Page */
+#reward_rules {
+	color: #092C4C !important;
+}
+
+#reward_rules a{
+	color: #092C4C !important;
+}
+
+/* Reward Rules and instructions Page */
+#reward_inst{
+	justify-content: left !important;
+	text-align: left !important;
+}
+
+#reward_inst .col{
+	text-decoration: none !important;
+	justify-items: start !important;
+	justify-content: start !important;
+	text-align: left !important;
+}
+
+#reward_inst ul li{
+	justify-content: start !important;
+	text-align: left !important;
+}
+
+#reward_inst_footer{
+	justify-items: right !important;
 }
