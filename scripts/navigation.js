@@ -68,5 +68,15 @@ $(document).ready(function() {
 	$('.edit_profile').on('click', function() { 
 		window.location.href = 'edit_profile.html';	
 	})
+
+	// go to Offers
+	$('.offers').on('click', function() { 
+		window.location.href = 'offers.html';	
+	})
+
+	// go to Test Offers
+	$('.test_offers').on('click', function() { 
+		window.location.href = 'test.html#offers_Page';	
+	})
 	
 });
