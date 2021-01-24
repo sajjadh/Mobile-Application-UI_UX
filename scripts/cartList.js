@@ -9,11 +9,11 @@ $(document).ready(function() {
     $('.cart_itemList').on('click', '.delete', function() {
         // Getting the datakeyword of clicked item
         var tempt = $(this).closest('li').attr('data-keyword');
-        alert("Cliskedvjebj")
+        // alert("Cliskedvjebj")
 
         $('.cart_itemList li[data-keyword=' + tempt + ']').remove()
 
-        alert('you clicked on button #' + tempt);
+        // alert('you clicked on button #' + tempt);
 
         //Display message when all items a removed
         var item_data = ''
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     })
     $('.buttonCheck').on('click', function() {
-            window.location.href = 'checkout.html';
+            window.location.href = 'payment_confirmation.html';
         })
         // Trigger toast
     $('#all_Items .itemList').on('click', '.delete', function() {
