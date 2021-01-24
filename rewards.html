@@ -1,26 +1,100 @@
-<!-- Sections 01 - 50%:
-Account Users Name
-Profile Picture
-Level Number
-Progress Bar
-Numeric Progress
-
-Point Earn Log - Point Breakdown:
-Setup 
-Friend Invites
-Orders
-
-Button Back to Shopping -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/app2.css"/>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!--JQuery  -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="scripts/navigation.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/navigation.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+
+		<!-- Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- App Style -->
+        <link rel="stylesheet" type="text/css" href="css/startPages.css"/>
+		<link rel="stylesheet" type="text/css" href="css/accountPages.css"/>
+		
+		<title>Account</title>
     </head>
     <body>
-        <div id="rewards-page" class="row w-100">
-            <div id="header" class="row w-100"><p>Malesh</p></div>
-            <div id="body" class="row"><p>Dilshan</p></div>
-            <div id="footer" class="row"><p>Piyaratne</p></div>
+        <div id="start_page" class="container-fluid">
+            <div id="start-tab" class="">
+                <div id="header" class="row w-100 mx-2 my-2">
+                    <div id="header-item" class="col">
+                        <h5 class="">Enzo Mitchell</h5>
+                        <br>
+                        <img src="images/profile_picture.png" class="img-fluid" alt="Profile Picture"/>
+                        <br>
+                        <div id="level" class="row w-100 mx-1 my-1 py-1 px-1">
+                            <div class="col-1 py-1 px-1">
+                                <img src="images/star.png" class="img-fluid" alt="Profile Picture"/>
+                            </div>
+                            <div class="col-4 py-1 px-1"><h6 class="my-1 mx-1">Level 01</h6></div>
+                        </div>
+                        <div id="progress_bar" class="row w-100 mt-1 mx-1 mb-1 py-1 px-1">
+                            <progress id="file" value="32" max="100"> 32% </progress>
+                        </div>
+                        <div id="progress_bar" class="row w-100 mt-1 mx-2 mb-1 py-1 px-6">
+                            <div class="col-6 py-1 px-1">
+                                <p>Points:</p>
+                            </div>
+                            <div class="col-6 py-1 px-1">
+                                <p>15/50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div id="header-item" class="row w-100 justify-content-start">
+                    <h6>Earned Points Log:</h6>
+                    <div class="row w-100 my-1 mx-1 py-1 px-1">
+                        <div class="col-6 py-1 px-1">
+                            <p>Initial setup completed</p>
+                        </div>
+                        <div class="col-6 py-1 px-1">
+                            <p>40 point</p>
+                        </div>
+                    </div>
+                    <div class="row w-100 my-1 mx-1 py-1 px-1">
+                        <div class="col-6 py-1 px-1">
+                            <p>New friend joined</p>
+                        </div>
+                        <div class="col-6 py-1 px-1">
+                            <p>20 point</p>
+                        </div>
+                    </div>
+                    <div class="row w-100 my-1 mx-1 py-1 px-1">
+                        <div class="col-6 py-1 px-1">
+                            <p>Order 5462798</p>
+                        </div>
+                        <div class="col-6 py-1 px-1">
+                            <p>30 point</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div id="header-item" class="row w-100">
+                    <div class="row w-100 justify-content-conter">
+                        <button onclick="window.location.href='home.html'" type="button" class="btn btn-primary">Back</button>
+                    </div>
+                    <div class="row w-100"><hr><hr></div>
+                    <div class="row w-100 my-1 mx-1 py-1 px-1">
+                        <div class="col my-1 mx-1 py-1 px-1">
+                            <p id="reward_rules"><a onclick="window.location.href='reward_rules.html'">Instructions & Rules</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <footer></footer>
