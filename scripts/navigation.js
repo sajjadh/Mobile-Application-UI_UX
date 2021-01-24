@@ -73,5 +73,10 @@ $(document).ready(function() {
 	$('.test_offers').on('click', function() { 
 		window.location.href = 'test.html#offers_Page';	
 	})
+
+	// go to Cart
+	$('.cart_page').on('click', function() { 
+		window.location.href = 'test.html#cartPage';	
+	})
 	
 });
