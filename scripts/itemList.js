@@ -122,7 +122,7 @@ $(document).ready(function() {
 
     // Trigger toast
     $('#all_Items .itemList').on('click', '.cartBtn', function() {
-        displayToast('success', 'Added To Favourites')
+        displayToast('success', 'Added To Cart')
     });
 
     // Trigger toast
